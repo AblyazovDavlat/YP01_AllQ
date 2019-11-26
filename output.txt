@@ -1,0 +1,322 @@
+Virtual User Script started at: 26.11.2019 22:38:26
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko  	[MsgId: MMSG-26988]
+Runtime Settings file: "D:\projects\VuGen\Scripts\YP01_AllQ\\default.cfg"  	[MsgId: MMSG-27141]
+Vuser directory: "D:\projects\VuGen\Scripts\YP01_AllQ"  	[MsgId: MMSG-27052]
+Vuser output directory: "D:\projects\VuGen\Scripts\YP01_AllQ"  	[MsgId: MMSG-27050]
+Operating system's current working directory: "d:\projects\vugen\scripts\yp01_allq"  	[MsgId: MMSG-27048]
+UTC (GMT) start date/time   : 2019-11-26 19:38:26  	[MsgId: MMSG-26992]
+LOCAL start date/time       : 2019-11-26 22:38:26  	[MsgId: MMSG-26991]
+Local daylight-Savings-Time : No  	[MsgId: MMSG-26990]
+Some of the Runtime Settings:  	[MsgId: MMSG-27142]
+    Download non-HTML resources: Yes  	[MsgId: MMSG-27018]
+    Verification checks: No  	[MsgId: MMSG-27017]
+    Convert from/to UTF-8: No  	[MsgId: MMSG-27016]
+    Simulate a new user each iteration: Yes  	[MsgId: MMSG-27009]
+    Non-critical item errors as warnings: Yes  	[MsgId: MMSG-27008]
+    HTTP errors as warnings: No  	[MsgId: MMSG-27007]
+    WinInet replay instead of Sockets: No  	[MsgId: MMSG-27006]
+    HTTP version: 1.1  	[MsgId: MMSG-27005]
+    Keep-Alive HTTP connections: Yes  	[MsgId: MMSG-27004]
+    Max self Meta refresh updates: 2  	[MsgId: MMSG-27003]
+    No proxy is used (direct connection to the Internet)  	[MsgId: MMSG-27171]
+    DNS caching: No  	[MsgId: MMSG-27035]
+    Simulate browser cache: Yes  	[MsgId: MMSG-27034]
+        Cache URLs requiring content (e.g., HTMLs): Yes  	[MsgId: MMSG-27033]
+            Additional URLs requiring content: text/xml;text/plain  	[MsgId: MMSG-27032]
+        Check for newer versions every visit to the page: No  	[MsgId: MMSG-27031]
+    Page download timeout (sec): 120  	[MsgId: MMSG-27030]
+    Resource Page Timeout is a Warning: No  	[MsgId: MMSG-27029]
+    ContentCheck enabled: Yes  	[MsgId: MMSG-27028]
+    ContentCheck script-level file: "D:\projects\VuGen\Scripts\YP01_AllQ\LrwiAedScript.xml"  	[MsgId: MMSG-27027]
+    Enable Web Page Breakdown: No  	[MsgId: MMSG-27026]
+    Enable connection data points: Yes  	[MsgId: MMSG-27023]
+    Process socket after reschedule: Yes  	[MsgId: MMSG-27022]
+    Snapshot on error: No  	[MsgId: MMSG-27021]
+    Define each step as a transaction: No  	[MsgId: MMSG-27020]
+    Read beyond Content-Length: No  	[MsgId: MMSG-26994]
+    Parse HTML Content-Type: TEXT  	[MsgId: MMSG-26999]
+    Graph hits per second and HTTP status codes: Yes  	[MsgId: MMSG-26998]
+    Graph response bytes per second: Yes  	[MsgId: MMSG-26997]
+    Graph pages per second: No  	[MsgId: MMSG-26996]
+    Web recorder version ID: 10  	[MsgId: MMSG-26995]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(4): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(4): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(7): web_url("test.youplace.net") started  	[MsgId: MMSG-26355]
+Action.c(7): t=158ms: Connecting [0] to host 185.204.3.165:80  	[MsgId: MMSG-26000]
+Action.c(7): t=172ms: Connected socket [0] from 192.168.0.104:39167 to 185.204.3.165:80 in 14 ms  	[MsgId: MMSG-26000]
+Action.c(7): t=172ms: 219-byte request headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
+Action.c(7):     GET / HTTP/1.1\r\n
+Action.c(7):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
+Action.c(7):     Accept-Encoding: gzip, deflate\r\n
+Action.c(7):     Accept-Language: ru-RU\r\n
+Action.c(7):     Accept: */*\r\n
+Action.c(7):     Connection: Keep-Alive\r\n
+Action.c(7):     Host: test.youplace.net\r\n
+Action.c(7):     \r\n
+Action.c(7): t=200ms: 248-byte response headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
+Action.c(7):     HTTP/1.1 200 OK\r\n
+Action.c(7):     Server: nginx\r\n
+Action.c(7):     Date: Tue, 26 Nov 2019 19:38:25 GMT\r\n
+Action.c(7):     Content-Type: text/html; charset=utf-8\r\n
+Action.c(7):     Content-Length: 1375\r\n
+Action.c(7):     Connection: keep-alive\r\n
+Action.c(7):     Set-Cookie: SID=P3BJ4lsP6pHkcP3UyENvJhGHrMbXnEZ0; Max-Age=3600; HttpOnly; SameSite=Strict\r
+Action.c(7):     \n
+Action.c(7):     \r\n
+Action.c(7): t=206ms: 1375-byte response body for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
+Action.c(7):     \n
+Action.c(7):     <!DOCTYPE html>\n
+Action.c(7):     <html lang="en">\n
+Action.c(7):     <head>\n
+Action.c(7):         <meta charset="UTF-8">\n
+Action.c(7):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\n
+Action.c(7):         <meta http-equiv="X-UA-Compatible" content="ie=edge">\n
+Action.c(7):         <title>New Test</title>\n
+Action.c(7):         <style>\n
+Action.c(7):             html {\n
+Action.c(7):                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ub
+Action.c(7):     untu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n
+Action.c(7):             }\n
+Action.c(7):             button {\n
+Action.c(7):                 padding: 5px 20px;\n
+Action.c(7):             }\n
+Action.c(7):             h1 {\n
+Action.c(7):                 font-size: 2.4em;\n
+Action.c(7):             }\n
+Action.c(7):             h2 {\n
+Action.c(7):                 font-size: 1.8em;\n
+Action.c(7):             }\n
+Action.c(7):             h3 {\n
+Action.c(7):                 font-size: 1.2em;\n
+Action.c(7):                 padding: 1em 2em;\n
+Action.c(7):                 border: 1px solid brown;\n
+Action.c(7):                 color: brown;\n
+Action.c(7):                 background-color: rgb(238, 201, 201);\n
+Action.c(7):             }\n
+Action.c(7):         </style>\n
+Action.c(7):     </head>\n
+Action.c(7):     <body>\n
+Action.c(7):     <h1>New Test</h1><hr>\n
+Action.c(7):     \n
+Action.c(7):     <p>You should take all questions using rules within each question. Rules are the same for 
+Action.c(7):     all questions.</p>\n
+Action.c(7):     <p>Test is considered as succeessful if you see "<b>Test successfully passed</b>" text at 
+Action.c(7):     the end.</p>\n
+Action.c(7):     <p>Please note this is not a performance server. Please use this host (test.youplace.net) 
+Action.c(7):     for scripting and validation purposes only.</p>\n
+Action.c(7):     <p>All HTTP requests will be automatically rejected with HTTP-503 error if the rate exceed
+Action.c(7):     s 10 requests per second.</p>\n
+Action.c(7):     <br>\n
+Action.c(7):     <a href="/question/1"><button>Start test</button></a>\n
+Action.c(7):     \n
+Action.c(7):     </body>\n
+Action.c(7):     </html>\n
+Action.c(7):     \n
+Action.c(7):     \n
+Action.c(7): t=209ms: Request done "http://test.youplace.net/"  	[MsgId: MMSG-26000]
+Action.c(7): Registered web_reg_find successful for "Text=New Test" (count=2)  	[MsgId: MMSG-26364]
+Action.c(7): web_url("test.youplace.net") was successful, 1375 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(16): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(16): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(19): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(19): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(26): web_link("Start test") started  	[MsgId: MMSG-26355]
+Action.c(26): Linking to "http://test.youplace.net/question/1", Target Frame=""  	[MsgId: MMSG-27994]
+Action.c(26): t=1104ms: Already connected [0] to test.youplace.net:80  	[MsgId: MMSG-26000]
+Action.c(26): t=1104ms: 311-byte request headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(26):     GET /question/1 HTTP/1.1\r\n
+Action.c(26):     Referer: http://test.youplace.net/\r\n
+Action.c(26):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
+Action.c(26):     Accept-Encoding: gzip, deflate\r\n
+Action.c(26):     Accept-Language: ru-RU\r\n
+Action.c(26):     Accept: */*\r\n
+Action.c(26):     Connection: Keep-Alive\r\n
+Action.c(26):     Host: test.youplace.net\r\n
+Action.c(26):     Cookie: SID=P3BJ4lsP6pHkcP3UyENvJhGHrMbXnEZ0\r\n
+Action.c(26):     \r\n
+Action.c(26): t=1126ms: 157-byte response headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(26):     HTTP/1.1 200 OK\r\n
+Action.c(26):     Server: nginx\r\n
+Action.c(26):     Date: Tue, 26 Nov 2019 19:38:26 GMT\r\n
+Action.c(26):     Content-Type: text/html; charset=utf-8\r\n
+Action.c(26):     Content-Length: 1231\r\n
+Action.c(26):     Connection: keep-alive\r\n
+Action.c(26):     \r\n
+Action.c(26): t=1127ms: 1231-byte response body for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(26):     \n
+Action.c(26):     <!DOCTYPE html>\n
+Action.c(26):     <html lang="en">\n
+Action.c(26):     <head>\n
+Action.c(26):         <meta charset="UTF-8">\n
+Action.c(26):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\n
+Action.c(26):         <meta http-equiv="X-UA-Compatible" content="ie=edge">\n
+Action.c(26):         <title>Question 1</title>\n
+Action.c(26):         <style>\n
+Action.c(26):             html {\n
+Action.c(26):                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ub
+Action.c(26):     untu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n
+Action.c(26):             }\n
+Action.c(26):             button {\n
+Action.c(26):                 padding: 5px 20px;\n
+Action.c(26):             }\n
+Action.c(26):             h1 {\n
+Action.c(26):                 font-size: 2.4em;\n
+Action.c(26):             }\n
+Action.c(26):             h2 {\n
+Action.c(26):                 font-size: 1.8em;\n
+Action.c(26):             }\n
+Action.c(26):             h3 {\n
+Action.c(26):                 font-size: 1.2em;\n
+Action.c(26):                 padding: 1em 2em;\n
+Action.c(26):                 border: 1px solid brown;\n
+Action.c(26):                 color: brown;\n
+Action.c(26):                 background-color: rgb(238, 201, 201);\n
+Action.c(26):             }\n
+Action.c(26):         </style>\n
+Action.c(26):     </head>\n
+Action.c(26):     <body>\n
+Action.c(26):     <h1>Question 1</h1><hr>\n
+Action.c(26):     \n
+Action.c(26):     <p><b>INPUT[@type=text]</b> field must be filled in with "test" value</p>\n
+Action.c(26):     <p><b>INPUT[@type=radio]</b> field must be selected with the longest value</li>\n
+Action.c(26):     <p><b>SELECT</b> field must be selected with the longest value</p>\n
+Action.c(26):     <h2>Answer</h2>\n
+Action.c(26):     \n
+Action.c(26):     <form method="POST">\n
+Action.c(26):         \n
+Action.c(26):         <p><input type="text" name="0wBtmJ604iZwODkv"></p>\n
+Action.c(26):         \n
+Action.c(26):         <p><button type="submit">Submit</button></p>\n
+Action.c(26):     </form>\n
+Action.c(26):     \n
+Action.c(26):     </body>\n
+Action.c(26):     </html>\n
+Action.c(26):     \n
+Action.c(26):     \n
+Action.c(26): Notify: Saving Parameter "TextValue = 0wBtmJ604iZwODkv".
+Action.c(26): t=1128ms: Request done "http://test.youplace.net/question/1"  	[MsgId: MMSG-26000]
+Action.c(26): Registered web_reg_find successful for "Text=Question 1" (count=2)  	[MsgId: MMSG-26364]
+Action.c(26): web_link("Start test") was successful, 1231 body bytes, 157 header bytes  	[MsgId: MMSG-26386]
+Action.c(31): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(31): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(34): web_submit_form("1") started  	[MsgId: MMSG-26355]
+Action.c(34): Notify: Parameter Substitution: parameter "TextValue" =  "0wBtmJ604iZwODkv"
+Action.c(34): Submitting form to "http://test.youplace.net/question/1", Target Frame=""  	[MsgId: MMSG-27978]
+Action.c(34): t=6320ms: Already connected [0] to test.youplace.net:80  	[MsgId: MMSG-26000]
+Action.c(34): t=6321ms: 391-byte request headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=3)
+Action.c(34):     POST /question/1 HTTP/1.1\r\n
+Action.c(34):     Content-Type: application/x-www-form-urlencoded\r\n
+Action.c(34):     Referer: http://test.youplace.net/question/1\r\n
+Action.c(34):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
+Action.c(34):     Accept-Encoding: gzip, deflate\r\n
+Action.c(34):     Accept-Language: ru-RU\r\n
+Action.c(34):     Accept: */*\r\n
+Action.c(34):     Connection: Keep-Alive\r\n
+Action.c(34):     Host: test.youplace.net\r\n
+Action.c(34):     Cookie: SID=P3BJ4lsP6pHkcP3UyENvJhGHrMbXnEZ0\r\n
+Action.c(34):     Content-Length: 21\r\n
+Action.c(34):     \r\n
+Action.c(34): t=6322ms: 21-byte request body for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=3)
+Action.c(34):     0wBtmJ604iZwODkv=test
+Action.c(34): t=6357ms: 140-byte response headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=3)
+Action.c(34):     HTTP/1.1 302 Found\r\n
+Action.c(34):     Server: nginx\r\n
+Action.c(34):     Date: Tue, 26 Nov 2019 19:38:31 GMT\r\n
+Action.c(34):     Content-Length: 0\r\n
+Action.c(34):     Connection: keep-alive\r\n
+Action.c(34):     Location: /question/2\r\n
+Action.c(34):     \r\n
+Action.c(34): Redirecting "http://test.youplace.net/question/1" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Action.c(34): To location "http://test.youplace.net/question/2"  	[MsgId: MMSG-26693]
+Action.c(34): t=6358ms: Request done "http://test.youplace.net/question/1"  	[MsgId: MMSG-26000]
+Action.c(34): t=6358ms: Connecting [1] to host 185.204.3.165:80  	[MsgId: MMSG-26000]
+Action.c(34): t=6372ms: Connected socket [1] from 192.168.0.104:39168 to 185.204.3.165:80 in 14 ms  	[MsgId: MMSG-26000]
+Action.c(34): t=6372ms: 321-byte request headers for "http://test.youplace.net/question/2" (RelFrameId=1, Internal ID=4)
+Action.c(34):     GET /question/2 HTTP/1.1\r\n
+Action.c(34):     Referer: http://test.youplace.net/question/1\r\n
+Action.c(34):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
+Action.c(34):     Accept-Encoding: gzip, deflate\r\n
+Action.c(34):     Accept-Language: ru-RU\r\n
+Action.c(34):     Accept: */*\r\n
+Action.c(34):     Connection: Keep-Alive\r\n
+Action.c(34):     Host: test.youplace.net\r\n
+Action.c(34):     Cookie: SID=P3BJ4lsP6pHkcP3UyENvJhGHrMbXnEZ0\r\n
+Action.c(34):     \r\n
+Action.c(34): t=6393ms: 157-byte response headers for "http://test.youplace.net/question/2" (RelFrameId=1, Internal ID=4)
+Action.c(34):     HTTP/1.1 200 OK\r\n
+Action.c(34):     Server: nginx\r\n
+Action.c(34):     Date: Tue, 26 Nov 2019 19:38:32 GMT\r\n
+Action.c(34):     Content-Type: text/html; charset=utf-8\r\n
+Action.c(34):     Content-Length: 1351\r\n
+Action.c(34):     Connection: keep-alive\r\n
+Action.c(34):     \r\n
+Action.c(34): t=6393ms: 1351-byte response body for "http://test.youplace.net/question/2" (RelFrameId=1, Internal ID=4)
+Action.c(34):     \n
+Action.c(34):     <!DOCTYPE html>\n
+Action.c(34):     <html lang="en">\n
+Action.c(34):     <head>\n
+Action.c(34):         <meta charset="UTF-8">\n
+Action.c(34):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\n
+Action.c(34):         <meta http-equiv="X-UA-Compatible" content="ie=edge">\n
+Action.c(34):         <title>Question 2</title>\n
+Action.c(34):         <style>\n
+Action.c(34):             html {\n
+Action.c(34):                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ub
+Action.c(34):     untu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n
+Action.c(34):             }\n
+Action.c(34):             button {\n
+Action.c(34):                 padding: 5px 20px;\n
+Action.c(34):             }\n
+Action.c(34):             h1 {\n
+Action.c(34):                 font-size: 2.4em;\n
+Action.c(34):             }\n
+Action.c(34):             h2 {\n
+Action.c(34):                 font-size: 1.8em;\n
+Action.c(34):             }\n
+Action.c(34):             h3 {\n
+Action.c(34):                 font-size: 1.2em;\n
+Action.c(34):                 padding: 1em 2em;\n
+Action.c(34):                 border: 1px solid brown;\n
+Action.c(34):                 color: brown;\n
+Action.c(34):                 background-color: rgb(238, 201, 201);\n
+Action.c(34):             }\n
+Action.c(34):         </style>\n
+Action.c(34):     </head>\n
+Action.c(34):     <body>\n
+Action.c(34):     <h1>Question 2</h1><hr>\n
+Action.c(34):     \n
+Action.c(34):     <p><b>INPUT[@type=text]</b> field must be filled in with "test" value</p>\n
+Action.c(34):     <p><b>INPUT[@type=radio]</b> field must be selected with the longest value</li>\n
+Action.c(34):     <p><b>SELECT</b> field must be selected with the longest value</p>\n
+Action.c(34):     <h2>Answer</h2>\n
+Action.c(34):     \n
+Action.c(34):     <form method="POST">\n
+Action.c(34):         \n
+Action.c(34):         <p><select name="p7zKXcyROB4rJJ5u"><option value=""></option><option value="AEwdwAt3qf
+Action.c(34):     YqldX">AEwdwAt3qfYqldX</option><option value="TM1ALLP">TM1ALLP</option></select></p>\n
+Action.c(34):         \n
+Action.c(34):         <p><button type="submit">Submit</button></p>\n
+Action.c(34):     </form>\n
+Action.c(34):     \n
+Action.c(34):     </body>\n
+Action.c(34):     </html>\n
+Action.c(34):     \n
+Action.c(34):     \n
+Action.c(34): t=6395ms: Request done "http://test.youplace.net/question/2"  	[MsgId: MMSG-26000]
+Action.c(34): Registered web_reg_find successful for "Text=Question 2" (count=2)  	[MsgId: MMSG-26364]
+Action.c(34): web_submit_form("1") was successful, 1351 body bytes, 297 header bytes  	[MsgId: MMSG-26386]
+Abort was called from an action.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+Action.c(40): t=11899ms: Closed connection [0] to test.youplace.net:80 after completing 3 request(s)  	[MsgId: MMSG-26000]
+Action.c(40): t=11899ms: Closed connection [1] to test.youplace.net:80 after completing 1 request(s)  	[MsgId: MMSG-26000]

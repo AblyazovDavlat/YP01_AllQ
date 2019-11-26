@@ -1,0 +1,32 @@
+<RepLookupResponse>
+    <RepLookupResult>
+              <Rs>                    
+            <M>test.youplace.net/question/5</M>
+            <C>UNKN:100:1:1</C>
+            <R>1:1</R>
+            <L>10080</L>
+            <S>0</S>
+        </Rs>      <Rs>                    
+            <M>vidtomp3.com</M>
+            <C>MALW:090:1:1</C>
+            <R>1:1</R>
+            <L>259200</L>
+            <S>0</S>
+        </Rs>      <Rs>                    
+            <M>www.wanyx.com/game</M>
+            <C>MALW:090:0:1</C>
+            <R>1:1</R>
+            <L>259200</L>
+            <S>0</S>
+        </Rs>      <Rs>                    
+            <M>wanyx.com/game</M>
+            <C>MALW:090:0:1</C>
+            <R>1:1</R>
+            <L>259200</L>
+            <S>0</S>
+        </Rs>
+    </RepLookupResult>
+    <Y>100</Y>
+    <T>5D73AE4A-39CA-E402-F6D5-2EEF908A0710</T>
+    <E>0</E>
+</RepLookupResponse>

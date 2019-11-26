@@ -1,0 +1,324 @@
+{
+  "FilterHeaders": [
+    {
+      "Header": "user-agent",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "cache-control",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-language",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-encoding",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept",
+      "IncludeInScript": false
+    }
+  ],
+  "FilterResources": [
+    {
+      "IsNonResource": true,
+      "type": "text/html"
+    }
+  ],
+  "GeneralInfo": {
+    "BrowserVersion": "",
+    "IsWinInetMode": false,
+    "MaxUsedConnections": 1,
+    "RecordedBrowser": "Internet Explorer",
+    "RecordingDate": "ноя-24-2019",
+    "RecordingDuration": 58672,
+    "RecordingMode": "N/A",
+    "RecordingTimeStamp": 1574615060,
+    "RecordingType": "Browser",
+    "TotalBytesReceived": 19854,
+    "TotalBytesSent": 9087,
+    "TotalRequests": 21,
+    "UserAgent": "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko"
+  },
+  "HostInfo": [
+    {
+      "DomainName": "youplace.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "185.204.3.165",
+          "IncludeInScript": true,
+          "Name": "test.youplace.net",
+          "Port": 80,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 776,
+              "HttpStatus": 200,
+              "Size": 388,
+              "URL": "http://test.youplace.net/question/9"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 749,
+              "HttpStatus": 200,
+              "Size": 2005,
+              "URL": "http://test.youplace.net/question/9"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 747,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "http://test.youplace.net/question/8"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 705,
+              "HttpStatus": 200,
+              "Size": 1991,
+              "URL": "http://test.youplace.net/question/8"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 32,
+              "EventId": 703,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "http://test.youplace.net/question/7"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 15,
+              "EventId": 687,
+              "HttpStatus": 200,
+              "Size": 1736,
+              "URL": "http://test.youplace.net/question/7"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 16,
+              "EventId": 685,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "http://test.youplace.net/question/6"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 32,
+              "EventId": 641,
+              "HttpStatus": 200,
+              "Size": 2032,
+              "URL": "http://test.youplace.net/question/6"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 639,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "http://test.youplace.net/question/5"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 32,
+              "EventId": 595,
+              "HttpStatus": 200,
+              "Size": 1774,
+              "URL": "http://test.youplace.net/question/5"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 593,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "http://test.youplace.net/question/4"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 15,
+              "EventId": 570,
+              "HttpStatus": 200,
+              "Size": 2369,
+              "URL": "http://test.youplace.net/question/4"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 568,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "http://test.youplace.net/question/3"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 539,
+              "HttpStatus": 200,
+              "Size": 1793,
+              "URL": "http://test.youplace.net/question/3"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 16,
+              "EventId": 533,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "http://test.youplace.net/question/2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 506,
+              "HttpStatus": 200,
+              "Size": 2001,
+              "URL": "http://test.youplace.net/question/2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 31,
+              "EventId": 504,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "http://test.youplace.net/question/1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 496,
+              "HttpStatus": 404,
+              "Size": 146,
+              "URL": "http://test.youplace.net/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 488,
+              "HttpStatus": 200,
+              "Size": 1881,
+              "URL": "http://test.youplace.net/question/1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 32,
+              "EventId": 478,
+              "HttpStatus": 404,
+              "Size": 146,
+              "URL": "http://test.youplace.net/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 474,
+              "HttpStatus": 200,
+              "Size": 1592,
+              "URL": "http://test.youplace.net/"
+            }
+          ],
+          "SSLCipher": "None",
+          "SSLVersion": "None"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "microsoft.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "65.52.226.14",
+          "IncludeInScript": false,
+          "Name": "urs.microsoft.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/xml",
+              "DownloadTime": 78,
+              "EventId": 615,
+              "HttpStatus": 200,
+              "Size": 936,
+              "URL": "https://urs.microsoft.com/urs.asmx?MSURS-Client-Key=/06J9GMJFz%2bUenMV0Qhh9g%3d%3d&MSURS-MAC=fcqn5sp1OYQ%3d"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "65.52.226.14",
+          "IncludeInScript": false,
+          "Name": "t.urs.microsoft.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/xml",
+              "DownloadTime": 156,
+              "EventId": 682,
+              "HttpStatus": 200,
+              "Size": 159,
+              "URL": "https://t.urs.microsoft.com/urstelemetry.asmx?MSTel-Client-Key=wFL4ZdXA8Z8uRcZx3NhJ4g%3d%3d&MSTel-MAC=CyjdxN7gUII%3d"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "152.199.19.161",
+          "IncludeInScript": false,
+          "Name": "iecvlist.microsoft.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/xml",
+              "DownloadTime": 47,
+              "EventId": 633,
+              "HttpStatus": 200,
+              "Size": 26292,
+              "URL": "https://iecvlist.microsoft.com/IE11/1478281996/iecompatviewlist.xml"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES256-GCM-SHA384",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    }
+  ],
+  "WebSocket": {
+    "IncludeInScript": false,
+    "IsScriptIncludeWebSocket": false
+  },
+  "NumberOfCorrelations": 10
+}

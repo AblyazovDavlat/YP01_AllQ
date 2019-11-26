@@ -1,0 +1,9 @@
+GET / HTTP/1.1
+Accept: text/html, application/xhtml+xml, image/jxr, */*
+Accept-Language: ru-RU
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Host: test.youplace.net
+Connection: Keep-Alive
+Cookie: SID=nk8PFY1Hn6RCK18c5y9SxgCWOh4hWzwt
+

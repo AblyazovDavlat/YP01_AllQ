@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 5</title>
+    <script type="text/javascript" src="http://ie.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=LSYqAzjNnRM7jrw9j-QKZl3Z-8FqbP310qa5UZVBiIqdCKQsx6WdEzWyCTG76D0l-bWfjnl5UiW4s2ThDVvsMQ" charset="UTF-8"></script><style>
+        html {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        button {
+            padding: 5px 20px;
+        }
+        h1 {
+            font-size: 2.4em;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        h3 {
+            font-size: 1.2em;
+            padding: 1em 2em;
+            border: 1px solid brown;
+            color: brown;
+            background-color: rgb(238, 201, 201);
+        }
+    </style>
+</head>
+<body>
+<h1>Question 5</h1><hr>
+
+<p><b>INPUT[@type=text]</b> field must be filled in with "test" value</p>
+<p><b>INPUT[@type=radio]</b> field must be selected with the longest value</li>
+<p><b>SELECT</b> field must be selected with the longest value</p>
+<h2>Answer</h2>
+
+<form method="POST">
+    
+    <p><input type="text" name="ykoK5QlzgjQd40cU"></p>
+    
+    <p><select name="hvwWoU8RcFTVE0rV"><option value=""></option><option value="fvTmzAb">fvTmzAb</option><option value="CREr0M26">CREr0M26</option><option value="CNYqsNwZ64EuC">CNYqsNwZ64EuC</option><option value="5riXJoW">5riXJoW</option><option value="lwWhBh0A3K">lwWhBh0A3K</option></select></p>
+    
+    <p><button type="submit">Submit</button></p>
+</form>
+
+</body>
+</html>
+
+

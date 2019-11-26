@@ -1,0 +1,13 @@
+[t3]
+SnapshotXmlFile=snapshot_3.xml
+ContentType=text/html
+StepName=Submit Form: 1
+Total=1
+FileName1=t3.html
+RequestHeaderFile=t3_RequestHeader.txt
+ResponseHeaderFile=t3_ResponseHeader.txt
+RawStepEndTime=1574797113001
+RawStepName=1
+RequestBodyFile=t3_RequestBody.txt
+RawStepStartTime=1574797112921
+URL1=http://test.youplace.net/question/2

@@ -1,0 +1,57 @@
+a65
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question 4</title>
+    <script type="text/javascript" src="http://ie.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-OEKEnQbGOZDXG-ilsS4pXDZPek1wjuKhht3JLfgVQaejcYSV_2n0VEsn4Akotp4h3l0rn4mpWHrJ6AyTdVBDQ" charset="UTF-8"></script><style>
+        html {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        button {
+            padding: 5px 20px;
+        }
+        h1 {
+            font-size: 2.4em;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        h3 {
+            font-size: 1.2em;
+            padding: 1em 2em;
+            border: 1px solid brown;
+            color: brown;
+            background-color: rgb(238, 201, 201);
+        }
+    </style>
+</head>
+<body>
+<h1>Question 4</h1><hr>
+
+<p><b>INPUT[@type=text]</b> field must be filled in with "test" value</p>
+<p><b>INPUT[@type=radio]</b> field must be selected with the longest value</li>
+<p><b>SELECT</b> field must be selected with the longest value</p>
+<h2>Answer</h2>
+
+<form method="POST">
+    
+    <p><input type="radio" name="sGS84wR1MmvRDdl1" value="WmKzpjHCul">WmKzpjHCul &nbsp;&nbsp;&nbsp;<input type="radio" name="sGS84wR1MmvRDdl1" value="9OOo1N8V">9OOo1N8V &nbsp;&nbsp;&nbsp;<input type="radio" name="sGS84wR1MmvRDdl1" value="VtepyS2NxOwbK">VtepyS2NxOwbK &nbsp;&nbsp;&nbsp;<input type="radio" name="sGS84wR1MmvRDdl1" value="9cMJVTfzQ">9cMJVTfzQ &nbsp;&nbsp;&nbsp;</p>
+    
+    <p><input type="radio" name="psGXhazowjxmkMsc" value="m3XrKxeHL">m3XrKxeHL &nbsp;&nbsp;&nbsp;<input type="radio" name="psGXhazowjxmkMsc" value="jIs1szMY5">jIs1szMY5 &nbsp;&nbsp;&nbsp;<input type="radio" name="psGXhazowjxmkMsc" value="TKigPnkQ">TKigPnkQ &nbsp;&nbsp;&nbsp;<input type="radio" name="psGXhazowjxmkMsc" value="fEBnbXb6ox86b5B">fEBnbXb6ox86b5B &nbsp;&nbsp;&nbsp;</p>
+    
+    <p><input type="radio" name="sKptCgOReanhKFU4" value="T6xshYA">T6xshYA &nbsp;&nbsp;&nbsp;<input type="radio" name="sKptCgOReanhKFU4" value="4yHLEtNRiO">4yHLEtNRiO &nbsp;&nbsp;&nbsp;<input type="radio" name="sKptCgOReanhKFU4" value="cMQpOFQ2">cMQpOFQ2 &nbsp;&nbsp;&nbsp;<input type="radio" name="sKptCgOReanhKFU4" value="vFysuNz6jU">vFysuNz6jU &nbsp;&nbsp;&nbsp;<input type="radio" name="sKptCgOReanhKFU4" value="pFug3cNLGmTfqBVW">pFug3cNLGmTfqBVW &nbsp;&nbsp;&nbsp;</p>
+    
+    <p><button type="submit">Submit</button></p>
+</form>
+
+</body>
+</html>
+
+
+
+0
+

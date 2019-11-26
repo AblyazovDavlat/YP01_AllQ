@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\projects\VuGen\Scripts\YP01_AllQ
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ed:\projects\vugen\scripts\yp01_allq\\logfile.log
+d:\projects\vugen\scripts\yp01_allq\\combined_YP01_AllQ.c
+d:\projects\vugen\scripts\yp01_allq\\pre_cci.c
