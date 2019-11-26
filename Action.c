@@ -1,5 +1,9 @@
 Action()
 {
+	int instance;
+	int i;
+    char name[20][32];
+    char value[20][32];
 
 	web_reg_find("Text=New Test", 
 		LAST);
@@ -15,11 +19,11 @@ Action()
 
 	web_reg_find("Text=Question 1", 
 		LAST);
-	
-	web_reg_save_param("TextValue", 
-        "LB/IC=<p><input type=\"text\" name=\"", 
-        "RB/IC=\">", 
-        "Ord=1", 
+
+	web_reg_save_param("TextName", 
+        "LB/IC=<input type=\"text\" name=\"", 
+        "RB/IC=\">",
+        "Ord=ALL", 
         "Search=body", 
         LAST);
 
@@ -27,6 +31,13 @@ Action()
 		"Text=Start test", 
 		"Snapshot=t16.inf", 
 		LAST);
+    
+    for (instance = 1; instance <= atoi(lr_eval_string("{TextName_count}")) ; instance++)
+    {
+		sprintf(name[instance], "{TextName_%d}", instance);
+		sprintf(value[instance], "%s", lr_eval_string(name[instance]));
+		lr_output_message(value[instance]);
+    }
 
 	web_reg_find("Text=Question 2", 
 		LAST);
@@ -34,7 +45,7 @@ Action()
 	web_submit_form("1", 
 		"Snapshot=t17.inf", 
 		ITEMDATA, 
-		"Name={TextValue}", "Value=test", ENDITEM, 
+		"Name={TextName}", "Value=test", ENDITEM, 
 		LAST);
 
 	web_reg_find("Text=Question 3", 

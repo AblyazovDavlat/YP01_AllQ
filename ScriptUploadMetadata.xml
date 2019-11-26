@@ -37,6 +37,7 @@
     <FileEntry Name="UserTasks.xml" Filter="1" />
     <FileEntry Name="YP01_AllQ.c.pickle" Filter="1" />
     <FileEntry Name="YP01_AllQ.ci" Filter="1" />
+    <FileEntry Name=".git\" Filter="1" />
     <FileEntry Name="data\" Filter="1" />
     <FileEntry Name="result1\" Filter="1" />
   </GeneralFiles>

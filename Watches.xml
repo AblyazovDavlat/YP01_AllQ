@@ -1,4 +1,3 @@
 ﻿<Properties>
-  <WatchEntry0 value="count" />
-  <WatchEntry1 value="TextValue" />
+  <WatchEntry0 value="name[1]" />
 </Properties>

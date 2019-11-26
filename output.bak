@@ -1,4 +1,4 @@
-Virtual User Script started at: 26.11.2019 22:38:17
+Virtual User Script started at: 27.11.2019 0:05:09
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
 Run mode: HTML  	[MsgId: MMSG-26993]
@@ -7,8 +7,8 @@ Runtime Settings file: "D:\projects\VuGen\Scripts\YP01_AllQ\\default.cfg"  	[Msg
 Vuser directory: "D:\projects\VuGen\Scripts\YP01_AllQ"  	[MsgId: MMSG-27052]
 Vuser output directory: "D:\projects\VuGen\Scripts\YP01_AllQ"  	[MsgId: MMSG-27050]
 Operating system's current working directory: "d:\projects\vugen\scripts\yp01_allq"  	[MsgId: MMSG-27048]
-UTC (GMT) start date/time   : 2019-11-26 19:38:17  	[MsgId: MMSG-26992]
-LOCAL start date/time       : 2019-11-26 22:38:17  	[MsgId: MMSG-26991]
+UTC (GMT) start date/time   : 2019-11-26 21:05:09  	[MsgId: MMSG-26992]
+LOCAL start date/time       : 2019-11-27 00:05:09  	[MsgId: MMSG-26991]
 Local daylight-Savings-Time : No  	[MsgId: MMSG-26990]
 Some of the Runtime Settings:  	[MsgId: MMSG-27142]
     Download non-HTML resources: Yes  	[MsgId: MMSG-27018]
@@ -47,172 +47,178 @@ Running Vuser...
 Starting iteration 1.
 Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
 Starting action Action.
-Action.c(4): web_reg_find started  	[MsgId: MMSG-26355]
-Action.c(4): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
-Action.c(7): web_url("test.youplace.net") started  	[MsgId: MMSG-26355]
-Action.c(7): t=155ms: Connecting [0] to host 185.204.3.165:80  	[MsgId: MMSG-26000]
-Action.c(7): t=176ms: Connected socket [0] from 192.168.0.104:39165 to 185.204.3.165:80 in 21 ms  	[MsgId: MMSG-26000]
-Action.c(7): t=176ms: 219-byte request headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
-Action.c(7):     GET / HTTP/1.1\r\n
-Action.c(7):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
-Action.c(7):     Accept-Encoding: gzip, deflate\r\n
-Action.c(7):     Accept-Language: ru-RU\r\n
-Action.c(7):     Accept: */*\r\n
-Action.c(7):     Connection: Keep-Alive\r\n
-Action.c(7):     Host: test.youplace.net\r\n
-Action.c(7):     \r\n
-Action.c(7): t=203ms: 248-byte response headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
-Action.c(7):     HTTP/1.1 200 OK\r\n
-Action.c(7):     Server: nginx\r\n
-Action.c(7):     Date: Tue, 26 Nov 2019 19:38:16 GMT\r\n
-Action.c(7):     Content-Type: text/html; charset=utf-8\r\n
-Action.c(7):     Content-Length: 1375\r\n
-Action.c(7):     Connection: keep-alive\r\n
-Action.c(7):     Set-Cookie: SID=PHTL7X2n9dJGH313vkBXJl91H98AJtna; Max-Age=3600; HttpOnly; SameSite=Strict\r
-Action.c(7):     \n
-Action.c(7):     \r\n
-Action.c(7): t=209ms: 1375-byte response body for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
-Action.c(7):     \n
-Action.c(7):     <!DOCTYPE html>\n
-Action.c(7):     <html lang="en">\n
-Action.c(7):     <head>\n
-Action.c(7):         <meta charset="UTF-8">\n
-Action.c(7):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\n
-Action.c(7):         <meta http-equiv="X-UA-Compatible" content="ie=edge">\n
-Action.c(7):         <title>New Test</title>\n
-Action.c(7):         <style>\n
-Action.c(7):             html {\n
-Action.c(7):                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ub
-Action.c(7):     untu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n
-Action.c(7):             }\n
-Action.c(7):             button {\n
-Action.c(7):                 padding: 5px 20px;\n
-Action.c(7):             }\n
-Action.c(7):             h1 {\n
-Action.c(7):                 font-size: 2.4em;\n
-Action.c(7):             }\n
-Action.c(7):             h2 {\n
-Action.c(7):                 font-size: 1.8em;\n
-Action.c(7):             }\n
-Action.c(7):             h3 {\n
-Action.c(7):                 font-size: 1.2em;\n
-Action.c(7):                 padding: 1em 2em;\n
-Action.c(7):                 border: 1px solid brown;\n
-Action.c(7):                 color: brown;\n
-Action.c(7):                 background-color: rgb(238, 201, 201);\n
-Action.c(7):             }\n
-Action.c(7):         </style>\n
-Action.c(7):     </head>\n
-Action.c(7):     <body>\n
-Action.c(7):     <h1>New Test</h1><hr>\n
-Action.c(7):     \n
-Action.c(7):     <p>You should take all questions using rules within each question. Rules are the same for 
-Action.c(7):     all questions.</p>\n
-Action.c(7):     <p>Test is considered as succeessful if you see "<b>Test successfully passed</b>" text at 
-Action.c(7):     the end.</p>\n
-Action.c(7):     <p>Please note this is not a performance server. Please use this host (test.youplace.net) 
-Action.c(7):     for scripting and validation purposes only.</p>\n
-Action.c(7):     <p>All HTTP requests will be automatically rejected with HTTP-503 error if the rate exceed
-Action.c(7):     s 10 requests per second.</p>\n
-Action.c(7):     <br>\n
-Action.c(7):     <a href="/question/1"><button>Start test</button></a>\n
-Action.c(7):     \n
-Action.c(7):     </body>\n
-Action.c(7):     </html>\n
-Action.c(7):     \n
-Action.c(7):     \n
-Action.c(7): t=212ms: Request done "http://test.youplace.net/"  	[MsgId: MMSG-26000]
-Action.c(7): Registered web_reg_find successful for "Text=New Test" (count=2)  	[MsgId: MMSG-26364]
-Action.c(7): web_url("test.youplace.net") was successful, 1375 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
-Action.c(16): web_reg_find started  	[MsgId: MMSG-26355]
-Action.c(16): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
-Action.c(19): web_reg_save_param started  	[MsgId: MMSG-26355]
-Action.c(19): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
-Action.c(26): web_link("Start test") started  	[MsgId: MMSG-26355]
-Action.c(26): Linking to "http://test.youplace.net/question/1", Target Frame=""  	[MsgId: MMSG-27994]
-Action.c(26): t=1056ms: Already connected [0] to test.youplace.net:80  	[MsgId: MMSG-26000]
-Action.c(26): t=1056ms: 311-byte request headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
-Action.c(26):     GET /question/1 HTTP/1.1\r\n
-Action.c(26):     Referer: http://test.youplace.net/\r\n
-Action.c(26):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
-Action.c(26):     Accept-Encoding: gzip, deflate\r\n
-Action.c(26):     Accept-Language: ru-RU\r\n
-Action.c(26):     Accept: */*\r\n
-Action.c(26):     Connection: Keep-Alive\r\n
-Action.c(26):     Host: test.youplace.net\r\n
-Action.c(26):     Cookie: SID=PHTL7X2n9dJGH313vkBXJl91H98AJtna\r\n
-Action.c(26):     \r\n
-Action.c(26): t=1084ms: 157-byte response headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
-Action.c(26):     HTTP/1.1 200 OK\r\n
-Action.c(26):     Server: nginx\r\n
-Action.c(26):     Date: Tue, 26 Nov 2019 19:38:17 GMT\r\n
-Action.c(26):     Content-Type: text/html; charset=utf-8\r\n
-Action.c(26):     Content-Length: 1483\r\n
-Action.c(26):     Connection: keep-alive\r\n
-Action.c(26):     \r\n
-Action.c(26): t=1084ms: 1483-byte response body for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
-Action.c(26):     \n
-Action.c(26):     <!DOCTYPE html>\n
-Action.c(26):     <html lang="en">\n
-Action.c(26):     <head>\n
-Action.c(26):         <meta charset="UTF-8">\n
-Action.c(26):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\n
-Action.c(26):         <meta http-equiv="X-UA-Compatible" content="ie=edge">\n
-Action.c(26):         <title>Question 1</title>\n
-Action.c(26):         <style>\n
-Action.c(26):             html {\n
-Action.c(26):                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ub
-Action.c(26):     untu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n
-Action.c(26):             }\n
-Action.c(26):             button {\n
-Action.c(26):                 padding: 5px 20px;\n
-Action.c(26):             }\n
-Action.c(26):             h1 {\n
-Action.c(26):                 font-size: 2.4em;\n
-Action.c(26):             }\n
-Action.c(26):             h2 {\n
-Action.c(26):                 font-size: 1.8em;\n
-Action.c(26):             }\n
-Action.c(26):             h3 {\n
-Action.c(26):                 font-size: 1.2em;\n
-Action.c(26):                 padding: 1em 2em;\n
-Action.c(26):                 border: 1px solid brown;\n
-Action.c(26):                 color: brown;\n
-Action.c(26):                 background-color: rgb(238, 201, 201);\n
-Action.c(26):             }\n
-Action.c(26):         </style>\n
-Action.c(26):     </head>\n
-Action.c(26):     <body>\n
-Action.c(26):     <h1>Question 1</h1><hr>\n
-Action.c(26):     \n
-Action.c(26):     <p><b>INPUT[@type=text]</b> field must be filled in with "test" value</p>\n
-Action.c(26):     <p><b>INPUT[@type=radio]</b> field must be selected with the longest value</li>\n
-Action.c(26):     <p><b>SELECT</b> field must be selected with the longest value</p>\n
-Action.c(26):     <h2>Answer</h2>\n
-Action.c(26):     \n
-Action.c(26):     <form method="POST">\n
-Action.c(26):         \n
-Action.c(26):         <p><select name="WHmXZjvNcm1IpxCQ"><option value=""></option><option value="taBlaZj45"
-Action.c(26):     >taBlaZj45</option><option value="2IkRYBbC">2IkRYBbC</option><option value="tgvUzuA0">tgvU
-Action.c(26):     zuA0</option><option value="OsbEutfwZVdmY29T">OsbEutfwZVdmY29T</option><option value="Ejr3
-Action.c(26):     ebTZ">Ejr3ebTZ</option></select></p>\n
-Action.c(26):         \n
-Action.c(26):         <p><button type="submit">Submit</button></p>\n
-Action.c(26):     </form>\n
-Action.c(26):     \n
-Action.c(26):     </body>\n
-Action.c(26):     </html>\n
-Action.c(26):     \n
-Action.c(26):     \n
-Action.c(26): t=1086ms: Request done "http://test.youplace.net/question/1"  	[MsgId: MMSG-26000]
-Action.c(26): Registered web_reg_find successful for "Text=Question 1" (count=2)  	[MsgId: MMSG-26364]
-Action.c(26): Error -26377: No match found for the requested parameter "TextValue". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 256 bytes. The total length of the response is 1483 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377] [Time:2019-11-26 22:38:18]
-Action.c(26): Notify: Saving Parameter "TextValue = ".
-Action.c(26): web_link("Start test") highest severity level was "ERROR", 1483 body bytes, 157 header bytes  	[MsgId: MMSG-26388]
+Action.c(8): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(8): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(11): web_url("test.youplace.net") started  	[MsgId: MMSG-26355]
+Action.c(11): t=170ms: Connecting [0] to host 185.204.3.165:80  	[MsgId: MMSG-26000]
+Action.c(11): t=185ms: Connected socket [0] from 192.168.0.104:40302 to 185.204.3.165:80 in 15 ms  	[MsgId: MMSG-26000]
+Action.c(11): t=185ms: 219-byte request headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
+Action.c(11):     GET / HTTP/1.1\r\n
+Action.c(11):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
+Action.c(11):     Accept-Encoding: gzip, deflate\r\n
+Action.c(11):     Accept-Language: ru-RU\r\n
+Action.c(11):     Accept: */*\r\n
+Action.c(11):     Connection: Keep-Alive\r\n
+Action.c(11):     Host: test.youplace.net\r\n
+Action.c(11):     \r\n
+Action.c(11): t=209ms: 248-byte response headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
+Action.c(11):     HTTP/1.1 200 OK\r\n
+Action.c(11):     Server: nginx\r\n
+Action.c(11):     Date: Tue, 26 Nov 2019 21:05:08 GMT\r\n
+Action.c(11):     Content-Type: text/html; charset=utf-8\r\n
+Action.c(11):     Content-Length: 1375\r\n
+Action.c(11):     Connection: keep-alive\r\n
+Action.c(11):     Set-Cookie: SID=y4Mi1EBlx2kZWPtYgphQJZxkuiKEDPsm; Max-Age=3600; HttpOnly; SameSite=Strict\r
+Action.c(11):     \n
+Action.c(11):     \r\n
+Action.c(11): t=216ms: 1375-byte response body for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
+Action.c(11):     \n
+Action.c(11):     <!DOCTYPE html>\n
+Action.c(11):     <html lang="en">\n
+Action.c(11):     <head>\n
+Action.c(11):         <meta charset="UTF-8">\n
+Action.c(11):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\n
+Action.c(11):         <meta http-equiv="X-UA-Compatible" content="ie=edge">\n
+Action.c(11):         <title>New Test</title>\n
+Action.c(11):         <style>\n
+Action.c(11):             html {\n
+Action.c(11):                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ub
+Action.c(11):     untu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n
+Action.c(11):             }\n
+Action.c(11):             button {\n
+Action.c(11):                 padding: 5px 20px;\n
+Action.c(11):             }\n
+Action.c(11):             h1 {\n
+Action.c(11):                 font-size: 2.4em;\n
+Action.c(11):             }\n
+Action.c(11):             h2 {\n
+Action.c(11):                 font-size: 1.8em;\n
+Action.c(11):             }\n
+Action.c(11):             h3 {\n
+Action.c(11):                 font-size: 1.2em;\n
+Action.c(11):                 padding: 1em 2em;\n
+Action.c(11):                 border: 1px solid brown;\n
+Action.c(11):                 color: brown;\n
+Action.c(11):                 background-color: rgb(238, 201, 201);\n
+Action.c(11):             }\n
+Action.c(11):         </style>\n
+Action.c(11):     </head>\n
+Action.c(11):     <body>\n
+Action.c(11):     <h1>New Test</h1><hr>\n
+Action.c(11):     \n
+Action.c(11):     <p>You should take all questions using rules within each question. Rules are the same for 
+Action.c(11):     all questions.</p>\n
+Action.c(11):     <p>Test is considered as succeessful if you see "<b>Test successfully passed</b>" text at 
+Action.c(11):     the end.</p>\n
+Action.c(11):     <p>Please note this is not a performance server. Please use this host (test.youplace.net) 
+Action.c(11):     for scripting and validation purposes only.</p>\n
+Action.c(11):     <p>All HTTP requests will be automatically rejected with HTTP-503 error if the rate exceed
+Action.c(11):     s 10 requests per second.</p>\n
+Action.c(11):     <br>\n
+Action.c(11):     <a href="/question/1"><button>Start test</button></a>\n
+Action.c(11):     \n
+Action.c(11):     </body>\n
+Action.c(11):     </html>\n
+Action.c(11):     \n
+Action.c(11):     \n
+Action.c(11): t=219ms: Request done "http://test.youplace.net/"  	[MsgId: MMSG-26000]
+Action.c(11): Registered web_reg_find successful for "Text=New Test" (count=2)  	[MsgId: MMSG-26364]
+Action.c(11): web_url("test.youplace.net") was successful, 1375 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
+Action.c(20): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(20): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(23): web_reg_save_param started  	[MsgId: MMSG-26355]
+Action.c(23): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
+Action.c(30): web_link("Start test") started  	[MsgId: MMSG-26355]
+Action.c(30): Linking to "http://test.youplace.net/question/1", Target Frame=""  	[MsgId: MMSG-27994]
+Action.c(30): t=2746ms: Already connected [0] to test.youplace.net:80  	[MsgId: MMSG-26000]
+Action.c(30): t=2746ms: 311-byte request headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(30):     GET /question/1 HTTP/1.1\r\n
+Action.c(30):     Referer: http://test.youplace.net/\r\n
+Action.c(30):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
+Action.c(30):     Accept-Encoding: gzip, deflate\r\n
+Action.c(30):     Accept-Language: ru-RU\r\n
+Action.c(30):     Accept: */*\r\n
+Action.c(30):     Connection: Keep-Alive\r\n
+Action.c(30):     Host: test.youplace.net\r\n
+Action.c(30):     Cookie: SID=y4Mi1EBlx2kZWPtYgphQJZxkuiKEDPsm\r\n
+Action.c(30):     \r\n
+Action.c(30): t=2770ms: 157-byte response headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(30):     HTTP/1.1 200 OK\r\n
+Action.c(30):     Server: nginx\r\n
+Action.c(30):     Date: Tue, 26 Nov 2019 21:05:11 GMT\r\n
+Action.c(30):     Content-Type: text/html; charset=utf-8\r\n
+Action.c(30):     Content-Length: 1882\r\n
+Action.c(30):     Connection: keep-alive\r\n
+Action.c(30):     \r\n
+Action.c(30): t=2771ms: 1882-byte response body for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(30):     \n
+Action.c(30):     <!DOCTYPE html>\n
+Action.c(30):     <html lang="en">\n
+Action.c(30):     <head>\n
+Action.c(30):         <meta charset="UTF-8">\n
+Action.c(30):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\n
+Action.c(30):         <meta http-equiv="X-UA-Compatible" content="ie=edge">\n
+Action.c(30):         <title>Question 1</title>\n
+Action.c(30):         <style>\n
+Action.c(30):             html {\n
+Action.c(30):                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ub
+Action.c(30):     untu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n
+Action.c(30):             }\n
+Action.c(30):             button {\n
+Action.c(30):                 padding: 5px 20px;\n
+Action.c(30):             }\n
+Action.c(30):             h1 {\n
+Action.c(30):                 font-size: 2.4em;\n
+Action.c(30):             }\n
+Action.c(30):             h2 {\n
+Action.c(30):                 font-size: 1.8em;\n
+Action.c(30):             }\n
+Action.c(30):             h3 {\n
+Action.c(30):                 font-size: 1.2em;\n
+Action.c(30):                 padding: 1em 2em;\n
+Action.c(30):                 border: 1px solid brown;\n
+Action.c(30):                 color: brown;\n
+Action.c(30):                 background-color: rgb(238, 201, 201);\n
+Action.c(30):             }\n
+Action.c(30):         </style>\n
+Action.c(30):     </head>\n
+Action.c(30):     <body>\n
+Action.c(30):     <h1>Question 1</h1><hr>\n
+Action.c(30):     \n
+Action.c(30):     <p><b>INPUT[@type=text]</b> field must be filled in with "test" value</p>\n
+Action.c(30):     <p><b>INPUT[@type=radio]</b> field must be selected with the longest value</li>\n
+Action.c(30):     <p><b>SELECT</b> field must be selected with the longest value</p>\n
+Action.c(30):     <h2>Answer</h2>\n
+Action.c(30):     \n
+Action.c(30):     <form method="POST">\n
+Action.c(30):         \n
+Action.c(30):         <p><input type="radio" name="kIAECgze1sFoV6i6" value="5lCwSvhMH8cS5P2">5lCwSvhMH8cS5P2
+Action.c(30):      &nbsp;&nbsp;&nbsp;<input type="radio" name="kIAECgze1sFoV6i6" value="jf0pp2JJa">jf0pp2JJa
+Action.c(30):      &nbsp;&nbsp;&nbsp;</p>\n
+Action.c(30):         \n
+Action.c(30):         <p><select name="zCIXuflQvuPpAjJK"><option value=""></option><option value="L6GyAKVOR6
+Action.c(30):     TcodD">L6GyAKVOR6TcodD</option><option value="u0etI9X0X1">u0etI9X0X1</option><option value
+Action.c(30):     ="GVtAbTIvD">GVtAbTIvD</option><option value="TrCmmDkRk">TrCmmDkRk</option></select></p>\n
+Action.c(30):         \n
+Action.c(30):         <p><select name="SkuSn7SAAM1QbHLj"><option value=""></option><option value="Bhg5OVdB7"
+Action.c(30):     >Bhg5OVdB7</option><option value="etDP7XYzUO6h6f2e">etDP7XYzUO6h6f2e</option><option value
+Action.c(30):     ="qUbatxX2">qUbatxX2</option></select></p>\n
+Action.c(30):         \n
+Action.c(30):         <p><button type="submit">Submit</button></p>\n
+Action.c(30):     </form>\n
+Action.c(30):     \n
+Action.c(30):     </body>\n
+Action.c(30):     </html>\n
+Action.c(30):     \n
+Action.c(30):     \n
+Action.c(30): t=2773ms: Request done "http://test.youplace.net/question/1"  	[MsgId: MMSG-26000]
+Action.c(30): Registered web_reg_find successful for "Text=Question 1" (count=2)  	[MsgId: MMSG-26364]
+Action.c(30): Error -26377: No match found for the requested parameter "TextName". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 256 bytes. The total length of the response is 1882 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377] [Time:2019-11-27 00:05:12]
+Action.c(30): Notify: Saving Parameter "TextName_count = 0".
+Action.c(30): web_link("Start test") highest severity level was "ERROR", 1882 body bytes, 157 header bytes  	[MsgId: MMSG-26388]
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...
 Starting action vuser_end.
-Ending action vuser_end.
-Vuser Terminated.
-Action.c(26): t=1125ms: Closed connection [0] to test.youplace.net:80 after completing 2 request(s)  	[MsgId: MMSG-26000]
+Abort was called from an action.
+vuser_end.c(3): t=4699ms: Closed connection [0] to test.youplace.net:80 after completing 2 request(s)  	[MsgId: MMSG-26000]
