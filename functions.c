@@ -7,9 +7,16 @@ void find_elements()
         "Search=body", 
         LAST);
     
-	web_reg_save_param("Radio", 
-        "LB/IC=<input type=\"radio\" ", 
-        "RB/IC=\">",
+	web_reg_save_param("RadioName", 
+        "LB/IC=<input type=\"radio\" name=\"", 
+        "RB/IC=\"",
+        "Ord=ALL", 
+        "Search=body", 
+        LAST);
+	
+	web_reg_save_param("RadioValue", 
+        "LB/IC=\" value=\"", 
+        "RB/IC=\"",
         "Ord=ALL", 
         "Search=body", 
         LAST);

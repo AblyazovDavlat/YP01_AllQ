@@ -8,21 +8,26 @@ Action()
 	struct Radio{
 		char name[STR_LEN];
 		char values[10][STR_LEN];
+		char maxValue[STR_LEN];
 	};
 	
 	struct Field FormFields[10];
 	struct Radio RadioGroups[10];
 	
-	int iT, iR, iS;
+	int iT, iR, iS, i, j;
 
 	char tmpTextFields[10][STR_LEN];
 	
-	char tmpRadioFields[30][STR_LEN];
+	char tmpRadioName[30][STR_LEN];
+	char tmpRadioValue[30][STR_LEN];
 	
     char tmpSelectFields[20][STR_LEN];
     
     char nameFields[10][64];
     char valueFields[10][64];
+    
+    int radioCount = 1;
+    int radioValues = 0;
 
     web_set_max_html_param_len("1024");
     	
@@ -61,48 +66,57 @@ Action()
 		lr_output_message(FormFields[iT].name);
     }
     
-    for (iR = 1; iR <= atoi(lr_eval_string("{Radio_count}")) ; iR++)
+
+    for (iR = 1; iR <= atoi(lr_eval_string("{RadioName_count}")) ; iR++)
     {
-    	int radioCount = 1;
-    	int radioValues = 0;
-    	char tmpStr[STR_LEN];
+    	char tmpName[STR_LEN];
+    	char tmpValue[STR_LEN];
     	char currentRadioName[STR_LEN];
-    	char nextRadioName[STR_LEN];
-    	sprintf(tmpRadioFields[iR], "{Radio_%d}", iR);
-    	strcpy(tmpStr, lr_eval_string(tmpRadioFields[iR]));
     	
-    	lr_save_param_regexp(
-    		tmpStr,
-    	    strlen(tmpStr),
-    	    "Ordinal=1",
-    	    "RegExp=\"name\"=\".*?\"",
-    	    "ResultParam=reMatchesRadioName",
-        	LAST
-    	);
+    	sprintf(tmpRadioName[iR], "{RadioName_%d}", iR);
+    	strcpy(tmpName, lr_eval_string(tmpRadioName[iR]));
     	
-    	if (strcmp (currentRadioName, lr_eval_string("{reMatchesRadioName}"))!=0)
+    	sprintf(tmpRadioValue[iR], "{RadioValue_%d}", iR);
+    	strcpy(tmpValue, lr_eval_string(tmpRadioValue[iR]));
+    	
+    	if (strcmp(currentRadioName, tmpName)!=0)
     	{
-    		strcpy(RadioGroups[radioCount].name, lr_eval_string("{reMatchesRadioName}"));
+    		strcpy(RadioGroups[radioCount].name, tmpName);
     		strcpy(currentRadioName, RadioGroups[radioCount].name);
     		radioCount++;
     		radioValues = 0;
     	}
     	
-    	lr_save_param_regexp(
-    		tmpStr,
-    	    strlen(tmpStr),
-    	    "Ordinal=1",
-    	    "RegExp=\"value\"=\".*?\"",
-    	    "ResultParam=reMatchesRadioValue",
-        	LAST
-    	);
-    	
-    	strcpy(RadioGroups[radioCount-1].values[radioValues], lr_eval_string("reMatchesRadioValue"));
+    	strcpy(RadioGroups[radioCount-1].values[radioValues], tmpValue);
     	radioValues++;
-    	
+    }
+    
+    for (iR = 1; iR < radioCount; iR++){
+    	char max[STR_LEN];
+    	strcpy(max,RadioGroups[iR].values[0]);
+    	for (radioValues = 0; radioValues < 10; radioValues++)
+    	{
+    		if(strlen(RadioGroups[iR].values[radioValues]) > strlen(max))
+    		{
+    			strcpy(max,RadioGroups[iR].values[radioValues]);
+    		}
+    		strcpy(RadioGroups[iR].maxValue, max);
+    	}
+    }
+    
+    j = radioCount - 1;
+    for (i = iT; i < iT + radioCount - 1; i++)
+    {
+		strcpy(FormFields[i].name, "Name=");
+		strcat(FormFields[i].name, RadioGroups[j].name);
+		strcpy(FormFields[i].value, "Value=");
+		strcat(FormFields[i].value, RadioGroups[j].maxValue);
+		lr_output_message(FormFields[i].name);
+		lr_output_message(FormFields[i].value);
+		j--;
     }
         
-    strcpy (FormFields[iT].name, "LAST");
+    strcpy (FormFields[i].name, "LAST");
 
 	web_reg_find("Text=Question 2", 
 		LAST);
