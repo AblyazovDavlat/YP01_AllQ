@@ -28,8 +28,3 @@ void find_elements()
         "Search=body", 
         LAST);	
 }
-
-void resolve_radio(char** radioArray, int size)
-{
-	
-}
