@@ -1,4 +1,4 @@
-Virtual User Script started at: 28.11.2019 1:36:16
+Virtual User Script started at: 28.11.2019 2:39:11
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.60.0 for Windows 10; build 971 (рту 09 2018 11:27:13)  	[MsgId: MMSG-26983]
 Run mode: HTML  	[MsgId: MMSG-26993]
@@ -7,8 +7,8 @@ Runtime Settings file: "D:\projects\VuGen\Scripts\YP01_AllQ\\default.cfg"  	[Msg
 Vuser directory: "D:\projects\VuGen\Scripts\YP01_AllQ"  	[MsgId: MMSG-27052]
 Vuser output directory: "D:\projects\VuGen\Scripts\YP01_AllQ"  	[MsgId: MMSG-27050]
 Operating system's current working directory: "d:\projects\vugen\scripts\yp01_allq"  	[MsgId: MMSG-27048]
-UTC (GMT) start date/time   : 2019-11-27 22:36:16  	[MsgId: MMSG-26992]
-LOCAL start date/time       : 2019-11-28 01:36:16  	[MsgId: MMSG-26991]
+UTC (GMT) start date/time   : 2019-11-27 23:39:11  	[MsgId: MMSG-26992]
+LOCAL start date/time       : 2019-11-28 02:39:11  	[MsgId: MMSG-26991]
 Local daylight-Savings-Time : No  	[MsgId: MMSG-26990]
 Some of the Runtime Settings:  	[MsgId: MMSG-27142]
     Download non-HTML resources: Yes  	[MsgId: MMSG-27018]
@@ -52,9 +52,9 @@ Action.c(32): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
 Action.c(34): web_reg_find started  	[MsgId: MMSG-26355]
 Action.c(34): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
 Action.c(37): web_url("test.youplace.net") started  	[MsgId: MMSG-26355]
-Action.c(37): t=182ms: Connecting [0] to host 185.204.3.165:80  	[MsgId: MMSG-26000]
-Action.c(37): t=197ms: Connected socket [0] from 192.168.0.104:54766 to 185.204.3.165:80 in 15 ms  	[MsgId: MMSG-26000]
-Action.c(37): t=197ms: 219-byte request headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
+Action.c(37): t=185ms: Connecting [0] to host 185.204.3.165:80  	[MsgId: MMSG-26000]
+Action.c(37): t=198ms: Connected socket [0] from 192.168.0.104:55754 to 185.204.3.165:80 in 13 ms  	[MsgId: MMSG-26000]
+Action.c(37): t=198ms: 219-byte request headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
 Action.c(37):     GET / HTTP/1.1\r\n
 Action.c(37):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
 Action.c(37):     Accept-Encoding: gzip, deflate\r\n
@@ -63,17 +63,17 @@ Action.c(37):     Accept: */*\r\n
 Action.c(37):     Connection: Keep-Alive\r\n
 Action.c(37):     Host: test.youplace.net\r\n
 Action.c(37):     \r\n
-Action.c(37): t=222ms: 248-byte response headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
+Action.c(37): t=228ms: 248-byte response headers for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
 Action.c(37):     HTTP/1.1 200 OK\r\n
 Action.c(37):     Server: nginx\r\n
-Action.c(37):     Date: Wed, 27 Nov 2019 22:36:15 GMT\r\n
+Action.c(37):     Date: Wed, 27 Nov 2019 23:39:10 GMT\r\n
 Action.c(37):     Content-Type: text/html; charset=utf-8\r\n
 Action.c(37):     Content-Length: 1375\r\n
 Action.c(37):     Connection: keep-alive\r\n
-Action.c(37):     Set-Cookie: SID=P7Fw7gCANCnLSZ0ckv891wWPOVcULMqY; Max-Age=3600; HttpOnly; SameSite=Strict\r
+Action.c(37):     Set-Cookie: SID=ZQlg5DH11xTMTEoxEBWdphzsBpIp1ZFG; Max-Age=3600; HttpOnly; SameSite=Strict\r
 Action.c(37):     \n
 Action.c(37):     \r\n
-Action.c(37): t=228ms: 1375-byte response body for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
+Action.c(37): t=235ms: 1375-byte response body for "http://test.youplace.net/" (RelFrameId=1, Internal ID=1)
 Action.c(37):     \n
 Action.c(37):     <!DOCTYPE html>\n
 Action.c(37):     <html lang="en">\n
@@ -123,7 +123,7 @@ Action.c(37):     </body>\n
 Action.c(37):     </html>\n
 Action.c(37):     \n
 Action.c(37):     \n
-Action.c(37): t=231ms: Request done "http://test.youplace.net/"  	[MsgId: MMSG-26000]
+Action.c(37): t=238ms: Request done "http://test.youplace.net/"  	[MsgId: MMSG-26000]
 Action.c(37): Registered web_reg_find successful for "Text=New Test" (count=2)  	[MsgId: MMSG-26364]
 Action.c(37): web_url("test.youplace.net") was successful, 1375 body bytes, 248 header bytes  	[MsgId: MMSG-26386]
 Action.c(46): web_reg_find started  	[MsgId: MMSG-26355]
@@ -138,8 +138,8 @@ functions.c(24): web_reg_save_param started  	[MsgId: MMSG-26355]
 functions.c(24): Registering web_reg_save_param was successful  	[MsgId: MMSG-26390]
 Action.c(53): web_link("Start test") started  	[MsgId: MMSG-26355]
 Action.c(53): Linking to "http://test.youplace.net/question/1", Target Frame=""  	[MsgId: MMSG-27994]
-Action.c(53): t=3552ms: Already connected [0] to test.youplace.net:80  	[MsgId: MMSG-26000]
-Action.c(53): t=3552ms: 311-byte request headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(53): t=4067ms: Already connected [0] to test.youplace.net:80  	[MsgId: MMSG-26000]
+Action.c(53): t=4067ms: 311-byte request headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
 Action.c(53):     GET /question/1 HTTP/1.1\r\n
 Action.c(53):     Referer: http://test.youplace.net/\r\n
 Action.c(53):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
@@ -148,23 +148,23 @@ Action.c(53):     Accept-Language: ru-RU\r\n
 Action.c(53):     Accept: */*\r\n
 Action.c(53):     Connection: Keep-Alive\r\n
 Action.c(53):     Host: test.youplace.net\r\n
-Action.c(53):     Cookie: SID=P7Fw7gCANCnLSZ0ckv891wWPOVcULMqY\r\n
+Action.c(53):     Cookie: SID=ZQlg5DH11xTMTEoxEBWdphzsBpIp1ZFG\r\n
 Action.c(53):     \r\n
-Action.c(53): t=3578ms: 163-byte response headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(53): t=4087ms: 163-byte response headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
 Action.c(53):     HTTP/1.1 200 OK\r\n
 Action.c(53):     Server: nginx\r\n
-Action.c(53):     Date: Wed, 27 Nov 2019 22:36:19 GMT\r\n
+Action.c(53):     Date: Wed, 27 Nov 2019 23:39:14 GMT\r\n
 Action.c(53):     Content-Type: text/html; charset=utf-8\r\n
 Action.c(53):     Transfer-Encoding: chunked\r\n
 Action.c(53):     Connection: keep-alive\r\n
 Action.c(53):     \r\n
-Action.c(53): t=3579ms: 5-byte chunked response overhead for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
-Action.c(53):     829\r\n
-Action.c(53): t=3579ms: 7-byte chunked response overhead for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(53): t=4088ms: 5-byte chunked response overhead for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(53):     8ca\r\n
+Action.c(53): t=4088ms: 7-byte chunked response overhead for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
 Action.c(53):     \r\n
 Action.c(53):     0\r\n
 Action.c(53):     \r\n
-Action.c(53): t=3580ms: 2089-byte chunked response body for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
+Action.c(53): t=4088ms: 2250-byte chunked response body for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=2)
 Action.c(53):     \n
 Action.c(53):     <!DOCTYPE html>\n
 Action.c(53):     <html lang="en">\n
@@ -206,20 +206,22 @@ Action.c(53):     <h2>Answer</h2>\n
 Action.c(53):     \n
 Action.c(53):     <form method="POST">\n
 Action.c(53):         \n
-Action.c(53):         <p><input type="radio" name="rcvAzuwMuO6BtoAg" value="nHR9hx4xpl">nHR9hx4xpl &nbsp;&nb
-Action.c(53):     sp;&nbsp;<input type="radio" name="rcvAzuwMuO6BtoAg" value="yPob6hXi">yPob6hXi &nbsp;&nbsp
-Action.c(53):     ;&nbsp;<input type="radio" name="rcvAzuwMuO6BtoAg" value="jMNeVxqkuTBze">jMNeVxqkuTBze &nb
-Action.c(53):     sp;&nbsp;&nbsp;<input type="radio" name="rcvAzuwMuO6BtoAg" value="74t5XfMp">74t5XfMp &nbsp
-Action.c(53):     ;&nbsp;&nbsp;</p>\n
+Action.c(53):         <p><input type="radio" name="eBhYZcdfUSxrSVVA" value="lQk7WuOz">lQk7WuOz &nbsp;&nbsp;&
+Action.c(53):     nbsp;<input type="radio" name="eBhYZcdfUSxrSVVA" value="cmDObya">cmDObya &nbsp;&nbsp;&nbsp
+Action.c(53):     ;<input type="radio" name="eBhYZcdfUSxrSVVA" value="l5sZ2YMa7qDy8KYS">l5sZ2YMa7qDy8KYS &nb
+Action.c(53):     sp;&nbsp;&nbsp;<input type="radio" name="eBhYZcdfUSxrSVVA" value="v2TVRhVNv">v2TVRhVNv &nb
+Action.c(53):     sp;&nbsp;&nbsp;<input type="radio" name="eBhYZcdfUSxrSVVA" value="VA96yRY">VA96yRY &nbsp;&
+Action.c(53):     nbsp;&nbsp;</p>\n
 Action.c(53):         \n
-Action.c(53):         <p><input type="text" name="EjSfepx407FZ4ns8"></p>\n
+Action.c(53):         <p><select name="GWOzqSZYhR0QBpMA"><option value=""></option><option value="bzZN2RX">b
+Action.c(53):     zZN2RX</option><option value="dSGoD02">dSGoD02</option><option value="Rz9zq2XHkooCUW">Rz9z
+Action.c(53):     q2XHkooCUW</option><option value="cuvPNhD">cuvPNhD</option><option value="Cy3pMFs">Cy3pMFs
+Action.c(53):     </option></select></p>\n
 Action.c(53):         \n
-Action.c(53):         <p><input type="radio" name="oGipKlH11rYEZqFO" value="CRvJunwF8XHjU">CRvJunwF8XHjU &nb
-Action.c(53):     sp;&nbsp;&nbsp;<input type="radio" name="oGipKlH11rYEZqFO" value="61LwCkLDi">61LwCkLDi &nb
-Action.c(53):     sp;&nbsp;&nbsp;<input type="radio" name="oGipKlH11rYEZqFO" value="ZG0WzjnkU">ZG0WzjnkU &nb
-Action.c(53):     sp;&nbsp;&nbsp;<input type="radio" name="oGipKlH11rYEZqFO" value="nK4oIpUDB">nK4oIpUDB &nb
-Action.c(53):     sp;&nbsp;&nbsp;<input type="radio" name="oGipKlH11rYEZqFO" value="tC7lBCGEY">tC7lBCGEY &nb
-Action.c(53):     sp;&nbsp;&nbsp;</p>\n
+Action.c(53):         <p><select name="o6borSSEPsFSZlgW"><option value=""></option><option value="EoybxDZ">E
+Action.c(53):     oybxDZ</option><option value="QwxKhVBWD">QwxKhVBWD</option><option value="6w3jALfAjEVdZQDC
+Action.c(53):     ">6w3jALfAjEVdZQDC</option><option value="LbShtYa">LbShtYa</option><option value="teMw5ODI
+Action.c(53):     8">teMw5ODI8</option></select></p>\n
 Action.c(53):         \n
 Action.c(53):         <p><button type="submit">Submit</button></p>\n
 Action.c(53):     </form>\n
@@ -228,199 +230,52 @@ Action.c(53):     </body>\n
 Action.c(53):     </html>\n
 Action.c(53):     \n
 Action.c(53):     \n
-Action.c(53): Notify: Saving Parameter "RadioName_1 = rcvAzuwMuO6BtoAg".
-Action.c(53): Notify: Saving Parameter "RadioValue_1 = nHR9hx4xpl".
-Action.c(53): Notify: Saving Parameter "RadioName_2 = rcvAzuwMuO6BtoAg".
-Action.c(53): Notify: Saving Parameter "RadioValue_2 = yPob6hXi".
-Action.c(53): Notify: Saving Parameter "RadioName_3 = rcvAzuwMuO6BtoAg".
-Action.c(53): Notify: Saving Parameter "RadioValue_3 = jMNeVxqkuTBze".
-Action.c(53): Notify: Saving Parameter "RadioName_4 = rcvAzuwMuO6BtoAg".
-Action.c(53): Notify: Saving Parameter "RadioValue_4 = 74t5XfMp".
-Action.c(53): Notify: Saving Parameter "Text_1 = EjSfepx407FZ4ns8".
-Action.c(53): Notify: Saving Parameter "RadioName_5 = oGipKlH11rYEZqFO".
-Action.c(53): Notify: Saving Parameter "RadioValue_5 = CRvJunwF8XHjU".
-Action.c(53): Notify: Saving Parameter "RadioName_6 = oGipKlH11rYEZqFO".
-Action.c(53): Notify: Saving Parameter "RadioValue_6 = 61LwCkLDi".
-Action.c(53): Notify: Saving Parameter "RadioName_7 = oGipKlH11rYEZqFO".
-Action.c(53): Notify: Saving Parameter "RadioValue_7 = ZG0WzjnkU".
-Action.c(53): Notify: Saving Parameter "RadioName_8 = oGipKlH11rYEZqFO".
-Action.c(53): Notify: Saving Parameter "RadioValue_8 = nK4oIpUDB".
-Action.c(53): Notify: Saving Parameter "RadioName_9 = oGipKlH11rYEZqFO".
-Action.c(53): Notify: Saving Parameter "RadioValue_9 = tC7lBCGEY".
-Action.c(53): t=3583ms: Request done "http://test.youplace.net/question/1"  	[MsgId: MMSG-26000]
+Action.c(53): Notify: Saving Parameter "RadioName_1 = eBhYZcdfUSxrSVVA".
+Action.c(53): Notify: Saving Parameter "RadioValue_1 = lQk7WuOz".
+Action.c(53): Notify: Saving Parameter "RadioName_2 = eBhYZcdfUSxrSVVA".
+Action.c(53): Notify: Saving Parameter "RadioValue_2 = cmDObya".
+Action.c(53): Notify: Saving Parameter "RadioName_3 = eBhYZcdfUSxrSVVA".
+Action.c(53): Notify: Saving Parameter "RadioValue_3 = l5sZ2YMa7qDy8KYS".
+Action.c(53): Notify: Saving Parameter "RadioName_4 = eBhYZcdfUSxrSVVA".
+Action.c(53): Notify: Saving Parameter "RadioValue_4 = v2TVRhVNv".
+Action.c(53): Notify: Saving Parameter "RadioName_5 = eBhYZcdfUSxrSVVA".
+Action.c(53): Notify: Saving Parameter "RadioValue_5 = VA96yRY".
+Action.c(53): Notify: Saving Parameter "Select_1 = "GWOzqSZYhR0QBpMA".
+Action.c(53): Notify: Saving Parameter "Select_2 = "o6borSSEPsFSZlgW".
+Action.c(53): t=4090ms: Request done "http://test.youplace.net/question/1"  	[MsgId: MMSG-26000]
 Action.c(53): Registered web_reg_find successful for "Text=Question 1" (count=2)  	[MsgId: MMSG-26364]
-Action.c(53): Notify: Saving Parameter "Text_count = 1".
-Action.c(53): Notify: Saving Parameter "RadioName_count = 9".
-Action.c(53): Notify: Saving Parameter "RadioValue_count = 9".
-Action.c(53): Continuing after Error -26377: No match found for the requested parameter "Select". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 1024 bytes. The total length of the response is 2089 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377] [Time:2019-11-28 01:36:20]
-Action.c(53): Notify: Saving Parameter "Select_count = 0".
-Action.c(53): web_link("Start test") highest severity level was "continue on error", 2089 body bytes, 163 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26387]
+Action.c(53): Continuing after Error -26377: No match found for the requested parameter "Text". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 1024 bytes. The total length of the response is 2250 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-26377] [Time:2019-11-28 02:39:15]
+Action.c(53): Notify: Saving Parameter "Text_count = 0".
+Action.c(53): Notify: Saving Parameter "RadioName_count = 5".
+Action.c(53): Notify: Saving Parameter "RadioValue_count = 5".
+Action.c(53): Notify: Saving Parameter "Select_count = 2".
+Action.c(53): web_link("Start test") highest severity level was "continue on error", 2250 body bytes, 163 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26387]
 Action.c(53): Continuing after error in Vuser script.
-Action.c(60): Notify: Parameter Substitution: parameter "Text_count" =  "1"
-Action.c(64): Notify: Parameter Substitution: parameter "Text_1" =  "EjSfepx407FZ4ns8"
-Action.c(66): Name=EjSfepx407FZ4ns8 [Time:2019-11-28 01:36:23]
-Action.c(60): Notify: Parameter Substitution: parameter "Text_count" =  "1"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(77): Notify: Parameter Substitution: parameter "RadioName_1" =  "rcvAzuwMuO6BtoAg"
-Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_1" =  "nHR9hx4xpl"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(77): Notify: Parameter Substitution: parameter "RadioName_2" =  "rcvAzuwMuO6BtoAg"
-Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_2" =  "yPob6hXi"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(77): Notify: Parameter Substitution: parameter "RadioName_3" =  "rcvAzuwMuO6BtoAg"
-Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_3" =  "jMNeVxqkuTBze"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(77): Notify: Parameter Substitution: parameter "RadioName_4" =  "rcvAzuwMuO6BtoAg"
-Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_4" =  "74t5XfMp"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(77): Notify: Parameter Substitution: parameter "RadioName_5" =  "oGipKlH11rYEZqFO"
-Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_5" =  "CRvJunwF8XHjU"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(77): Notify: Parameter Substitution: parameter "RadioName_6" =  "oGipKlH11rYEZqFO"
-Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_6" =  "61LwCkLDi"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(77): Notify: Parameter Substitution: parameter "RadioName_7" =  "oGipKlH11rYEZqFO"
-Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_7" =  "ZG0WzjnkU"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(77): Notify: Parameter Substitution: parameter "RadioName_8" =  "oGipKlH11rYEZqFO"
-Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_8" =  "nK4oIpUDB"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(77): Notify: Parameter Substitution: parameter "RadioName_9" =  "oGipKlH11rYEZqFO"
-Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_9" =  "tC7lBCGEY"
-Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "9"
-Action.c(114): Name=oGipKlH11rYEZqFO [Time:2019-11-28 01:36:32]
-Action.c(115): Value=CRvJunwF8XHjU [Time:2019-11-28 01:36:33]
-Action.c(114): Name=rcvAzuwMuO6BtoAg [Time:2019-11-28 01:36:41]
-Action.c(115): Value=jMNeVxqkuTBze [Time:2019-11-28 01:36:42]
-Action.c(121): web_reg_find started  	[MsgId: MMSG-26355]
-Action.c(121): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
-Action.c(124): web_submit_data("1") started  	[MsgId: MMSG-26355]
-Action.c(124): t=33831ms: Already connected [0] to test.youplace.net:80  	[MsgId: MMSG-26000]
-Action.c(124): t=33831ms: 391-byte request headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=3)
-Action.c(124):     POST /question/1 HTTP/1.1\r\n
-Action.c(124):     Content-Type: application/x-www-form-urlencoded\r\n
-Action.c(124):     Referer: http://test.youplace.net/question/1\r\n
-Action.c(124):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
-Action.c(124):     Accept-Encoding: gzip, deflate\r\n
-Action.c(124):     Accept-Language: ru-RU\r\n
-Action.c(124):     Accept: */*\r\n
-Action.c(124):     Connection: Keep-Alive\r\n
-Action.c(124):     Host: test.youplace.net\r\n
-Action.c(124):     Cookie: SID=P7Fw7gCANCnLSZ0ckv891wWPOVcULMqY\r\n
-Action.c(124):     Content-Length: 83\r\n
-Action.c(124):     \r\n
-Action.c(124): t=33833ms: 83-byte request body for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=3)
-Action.c(124):     EjSfepx407FZ4ns8=test&oGipKlH11rYEZqFO=CRvJunwF8XHjU&rcvAzuwMuO6BtoAg=jMNeVxqkuTBze
-Action.c(124): t=33863ms: 140-byte response headers for "http://test.youplace.net/question/1" (RelFrameId=1, Internal ID=3)
-Action.c(124):     HTTP/1.1 302 Found\r\n
-Action.c(124):     Server: nginx\r\n
-Action.c(124):     Date: Wed, 27 Nov 2019 22:36:49 GMT\r\n
-Action.c(124):     Content-Length: 0\r\n
-Action.c(124):     Connection: keep-alive\r\n
-Action.c(124):     Location: /question/2\r\n
-Action.c(124):     \r\n
-Action.c(124): Redirecting "http://test.youplace.net/question/1" (redirection depth is 0)  	[MsgId: MMSG-26694]
-Action.c(124): To location "http://test.youplace.net/question/2"  	[MsgId: MMSG-26693]
-Action.c(124): t=33864ms: Request done "http://test.youplace.net/question/1"  	[MsgId: MMSG-26000]
-Action.c(124): t=33864ms: Connecting [1] to host 185.204.3.165:80  	[MsgId: MMSG-26000]
-Action.c(124): t=33877ms: Connected socket [1] from 192.168.0.104:54773 to 185.204.3.165:80 in 13 ms  	[MsgId: MMSG-26000]
-Action.c(124): t=33877ms: 321-byte request headers for "http://test.youplace.net/question/2" (RelFrameId=1, Internal ID=4)
-Action.c(124):     GET /question/2 HTTP/1.1\r\n
-Action.c(124):     Referer: http://test.youplace.net/question/1\r\n
-Action.c(124):     User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko\r\n
-Action.c(124):     Accept-Encoding: gzip, deflate\r\n
-Action.c(124):     Accept-Language: ru-RU\r\n
-Action.c(124):     Accept: */*\r\n
-Action.c(124):     Connection: Keep-Alive\r\n
-Action.c(124):     Host: test.youplace.net\r\n
-Action.c(124):     Cookie: SID=P7Fw7gCANCnLSZ0ckv891wWPOVcULMqY\r\n
-Action.c(124):     \r\n
-Action.c(124): t=33898ms: 163-byte response headers for "http://test.youplace.net/question/2" (RelFrameId=1, Internal ID=4)
-Action.c(124):     HTTP/1.1 200 OK\r\n
-Action.c(124):     Server: nginx\r\n
-Action.c(124):     Date: Wed, 27 Nov 2019 22:36:49 GMT\r\n
-Action.c(124):     Content-Type: text/html; charset=utf-8\r\n
-Action.c(124):     Transfer-Encoding: chunked\r\n
-Action.c(124):     Connection: keep-alive\r\n
-Action.c(124):     \r\n
-Action.c(124): t=33898ms: 5-byte chunked response overhead for "http://test.youplace.net/question/2" (RelFrameId=1, Internal ID=4)
-Action.c(124):     838\r\n
-Action.c(124): t=33898ms: 7-byte chunked response overhead for "http://test.youplace.net/question/2" (RelFrameId=1, Internal ID=4)
-Action.c(124):     \r\n
-Action.c(124):     0\r\n
-Action.c(124):     \r\n
-Action.c(124): t=33899ms: 2104-byte chunked response body for "http://test.youplace.net/question/2" (RelFrameId=1, Internal ID=4)
-Action.c(124):     \n
-Action.c(124):     <!DOCTYPE html>\n
-Action.c(124):     <html lang="en">\n
-Action.c(124):     <head>\n
-Action.c(124):         <meta charset="UTF-8">\n
-Action.c(124):         <meta name="viewport" content="width=device-width, initial-scale=1.0">\n
-Action.c(124):         <meta http-equiv="X-UA-Compatible" content="ie=edge">\n
-Action.c(124):         <title>Question 2</title>\n
-Action.c(124):         <style>\n
-Action.c(124):             html {\n
-Action.c(124):                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ub
-Action.c(124):     untu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n
-Action.c(124):             }\n
-Action.c(124):             button {\n
-Action.c(124):                 padding: 5px 20px;\n
-Action.c(124):             }\n
-Action.c(124):             h1 {\n
-Action.c(124):                 font-size: 2.4em;\n
-Action.c(124):             }\n
-Action.c(124):             h2 {\n
-Action.c(124):                 font-size: 1.8em;\n
-Action.c(124):             }\n
-Action.c(124):             h3 {\n
-Action.c(124):                 font-size: 1.2em;\n
-Action.c(124):                 padding: 1em 2em;\n
-Action.c(124):                 border: 1px solid brown;\n
-Action.c(124):                 color: brown;\n
-Action.c(124):                 background-color: rgb(238, 201, 201);\n
-Action.c(124):             }\n
-Action.c(124):         </style>\n
-Action.c(124):     </head>\n
-Action.c(124):     <body>\n
-Action.c(124):     <h1>Question 2</h1><hr>\n
-Action.c(124):     \n
-Action.c(124):     <p><b>INPUT[@type=text]</b> field must be filled in with "test" value</p>\n
-Action.c(124):     <p><b>INPUT[@type=radio]</b> field must be selected with the longest value</li>\n
-Action.c(124):     <p><b>SELECT</b> field must be selected with the longest value</p>\n
-Action.c(124):     <h2>Answer</h2>\n
-Action.c(124):     \n
-Action.c(124):     <form method="POST">\n
-Action.c(124):         \n
-Action.c(124):         <p><select name="4977nKd8Hnqhy4fO"><option value=""></option><option value="G0kNreg">G
-Action.c(124):     0kNreg</option><option value="COx1NgDL">COx1NgDL</option><option value="r5LLIwTEvWXZcUOX">
-Action.c(124):     r5LLIwTEvWXZcUOX</option></select></p>\n
-Action.c(124):         \n
-Action.c(124):         <p><select name="DOiYkDRIkR9MbeKj"><option value=""></option><option value="CixxjZmFLF
-Action.c(124):     exnii3">CixxjZmFLFexnii3</option><option value="9UEc1JN">9UEc1JN</option></select></p>\n
-Action.c(124):         \n
-Action.c(124):         <p><input type="radio" name="oN7awd8fNpUYRQWc" value="cXutvaqz5PBqgEur">cXutvaqz5PBqgE
-Action.c(124):     ur &nbsp;&nbsp;&nbsp;<input type="radio" name="oN7awd8fNpUYRQWc" value="2wuylyPl">2wuylyPl
-Action.c(124):      &nbsp;&nbsp;&nbsp;</p>\n
-Action.c(124):         \n
-Action.c(124):         <p><select name="l730Nvt1GUSCqW4b"><option value=""></option><option value="W070jRr">W
-Action.c(124):     070jRr</option><option value="8SgimsWXfj">8SgimsWXfj</option><option value="obRLjDEf7Kpvuv
-Action.c(124):     ub">obRLjDEf7Kpvuvub</option><option value="5eGFlG5Xo">5eGFlG5Xo</option><option value="uU
-Action.c(124):     0FLfc3xW">uU0FLfc3xW</option></select></p>\n
-Action.c(124):         \n
-Action.c(124):         <p><button type="submit">Submit</button></p>\n
-Action.c(124):     </form>\n
-Action.c(124):     \n
-Action.c(124):     </body>\n
-Action.c(124):     </html>\n
-Action.c(124):     \n
-Action.c(124):     \n
-Action.c(124): t=33901ms: Request done "http://test.youplace.net/question/2"  	[MsgId: MMSG-26000]
-Action.c(124): Registered web_reg_find successful for "Text=Question 2" (count=2)  	[MsgId: MMSG-26364]
-Action.c(124): web_submit_data("1") was successful, 2104 body bytes, 303 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-Abort was called from an action.
+Action.c(60): Notify: Parameter Substitution: parameter "Text_count" =  "0"
+Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "5"
+Action.c(77): Notify: Parameter Substitution: parameter "RadioName_1" =  "eBhYZcdfUSxrSVVA"
+Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_1" =  "lQk7WuOz"
+Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "5"
+Action.c(77): Notify: Parameter Substitution: parameter "RadioName_2" =  "eBhYZcdfUSxrSVVA"
+Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_2" =  "cmDObya"
+Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "5"
+Action.c(77): Notify: Parameter Substitution: parameter "RadioName_3" =  "eBhYZcdfUSxrSVVA"
+Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_3" =  "l5sZ2YMa7qDy8KYS"
+Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "5"
+Action.c(77): Notify: Parameter Substitution: parameter "RadioName_4" =  "eBhYZcdfUSxrSVVA"
+Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_4" =  "v2TVRhVNv"
+Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "5"
+Action.c(77): Notify: Parameter Substitution: parameter "RadioName_5" =  "eBhYZcdfUSxrSVVA"
+Action.c(80): Notify: Parameter Substitution: parameter "RadioValue_5" =  "VA96yRY"
+Action.c(70): Notify: Parameter Substitution: parameter "RadioName_count" =  "5"
+Action.c(114): Name=eBhYZcdfUSxrSVVA [Time:2019-11-28 02:39:17]
+Action.c(115): Value=l5sZ2YMa7qDy8KYS [Time:2019-11-28 02:39:17]
+Action.c(119): Notify: Parameter Substitution: parameter "Select_count" =  "2"
+Action.c(124): Notify: Parameter Substitution: parameter "Select_1" =  ""GWOzqSZYhR0QBpMA"
+functions.c(69): Error: C interpreter run time error: functions.c (69):  Error -- memory violation : Exception ACCESS_VIOLATION received.
+Action was aborted.
 Ending Vuser...
 Starting action vuser_end.
 Ending action vuser_end.
 Vuser Terminated.
-Action.c(141): t=36758ms: Closed connection [0] to test.youplace.net:80 after completing 3 request(s)  	[MsgId: MMSG-26000]
-Action.c(141): t=36758ms: Closed connection [1] to test.youplace.net:80 after completing 1 request(s)  	[MsgId: MMSG-26000]
+t=24197ms: Closed connection [0] to test.youplace.net:80 after completing 2 request(s)  	[MsgId: MMSG-26000]

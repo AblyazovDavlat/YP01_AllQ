@@ -3,4 +3,6 @@
   <WatchEntry1 value="radioCount" />
   <WatchEntry2 value="radioValues" />
   <WatchEntry3 value="iT" />
+  <WatchEntry4 value="delim" />
+  <WatchEntry5 value="delim[0]" />
 </Properties>

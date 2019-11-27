@@ -115,8 +115,25 @@ Action()
 		lr_output_message(FormFields[i].value);
 		j--;
     }
-        
-    strcpy (FormFields[i].name, "LAST");
+    
+    for (iS = 1; iS <= atoi(lr_eval_string("{Select_count}")) ; iS++)
+    {
+    	char tmpStr[1024];
+    	char** matchedStr;
+    	sprintf(tmpSelectFields[iS], "{Select_%d}", iS);
+    	strcpy(tmpStr, lr_eval_string(tmpSelectFields[iS]));
+    	matchedStr = str_split(tmpStr, '\"');
+    	if (matchedStr)
+    	{
+       		int i;
+        	for (i = 0; *(matchedStr + i); i++)
+        	{
+            	lr_output_message(*(matchedStr + i));
+        	}
+    	}
+    }
+    
+    strcpy(FormFields[i].name, "LAST");
 
 	web_reg_find("Text=Question 2", 
 		LAST);
@@ -137,6 +154,9 @@ Action()
 		FormFields[9].name, FormFields[9].value, ENDITEM,
 		FormFields[10].name, FormFields[10].value, ENDITEM,
 		LAST);
+    
+    radioCount = 1;
+    radioValues = 0;
 
 	web_reg_find("Text=Question 3", 
 		LAST);

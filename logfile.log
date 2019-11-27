@@ -1,1 +1,4 @@
-d:\projects\vugen\scripts\yp01_allq\\pre_cci.c: functions.c:26: warning: unrecognized character escape sequence `\/'
+d:\projects\vugen\scripts\yp01_allq\\pre_cci.c: C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stdlib.h:52: warning: declaration of `malloc' does not match previous declaration at functions.c:60
+d:\projects\vugen\scripts\yp01_allq\\pre_cci.c: C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/string.h:33: warning: declaration of `strlen' does not match previous declaration at functions.c:54
+d:\projects\vugen\scripts\yp01_allq\\pre_cci.c: C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/string.h:41: warning: declaration of `strtok' does not match previous declaration at functions.c:65
+d:\projects\vugen\scripts\yp01_allq\\pre_cci.c: C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/string.h:45: warning: declaration of `strdup' does not match previous declaration at functions.c:70

@@ -7,7 +7,10 @@
 #include "web_api.h"
 #include "lrw_custom_body.h"
 #include "functions.c" 
-#include "string.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
 
 
 //--------------------------------------------------------------------
