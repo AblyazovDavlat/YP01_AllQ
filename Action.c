@@ -1,10 +1,31 @@
 Action()
 {
-	int instance;
-	int i;
-    char name[20][32];
-    char value[20][32];
+	struct Field{
+		char name[STR_LEN];
+		char value[STR_LEN];
+	};
+	
+	struct Radio{
+		char name[STR_LEN];
+		char values[10][STR_LEN];
+	};
+	
+	struct Field FormFields[10];
+	struct Radio RadioGroups[10];
+	
+	int iT, iR, iS;
 
+	char tmpTextFields[10][STR_LEN];
+	
+	char tmpRadioFields[30][STR_LEN];
+	
+    char tmpSelectFields[20][STR_LEN];
+    
+    char nameFields[10][64];
+    char valueFields[10][64];
+
+    web_set_max_html_param_len("1024");
+    	
 	web_reg_find("Text=New Test", 
 		LAST);
 
@@ -20,32 +41,87 @@ Action()
 	web_reg_find("Text=Question 1", 
 		LAST);
 
-	web_reg_save_param("TextName", 
-        "LB/IC=<input type=\"text\" name=\"", 
-        "RB/IC=\">",
-        "Ord=ALL", 
-        "Search=body", 
-        LAST);
+    find_elements();
 
+	lr_continue_on_error(1);
+	
 	web_link("Start test", 
 		"Text=Start test", 
-		"Snapshot=t16.inf", 
+		"Snapshot=t16.inf",
 		LAST);
+
+    lr_continue_on_error(0);
     
-    for (instance = 1; instance <= atoi(lr_eval_string("{TextName_count}")) ; instance++)
+    for (iT = 1; iT <= atoi(lr_eval_string("{Text_count}")) ; iT++)
     {
-		sprintf(name[instance], "{TextName_%d}", instance);
-		sprintf(value[instance], "%s", lr_eval_string(name[instance]));
-		lr_output_message(value[instance]);
+		sprintf(tmpTextFields[iT], "{Text_%d}", iT);
+		strcpy(FormFields[iT].name, "Name=");
+		strcat(FormFields[iT].name, lr_eval_string(tmpTextFields[iT]));
+		strcpy(FormFields[iT].value, "Value=test");
+		lr_output_message(FormFields[iT].name);
     }
+    
+    for (iR = 1; iR <= atoi(lr_eval_string("{Radio_count}")) ; iR++)
+    {
+    	int radioCount = 1;
+    	int radioValues = 0;
+    	char tmpStr[STR_LEN];
+    	char currentRadioName[STR_LEN];
+    	char nextRadioName[STR_LEN];
+    	sprintf(tmpRadioFields[iR], "{Radio_%d}", iR);
+    	strcpy(tmpStr, lr_eval_string(tmpRadioFields[iR]));
+    	
+    	lr_save_param_regexp(
+    		tmpStr,
+    	    strlen(tmpStr),
+    	    "Ordinal=1",
+    	    "RegExp=\"name\"=\".*?\"",
+    	    "ResultParam=reMatchesRadioName",
+        	LAST
+    	);
+    	
+    	if (strcmp (currentRadioName, lr_eval_string("{reMatchesRadioName}"))!=0)
+    	{
+    		strcpy(RadioGroups[radioCount].name, lr_eval_string("{reMatchesRadioName}"));
+    		strcpy(currentRadioName, RadioGroups[radioCount].name);
+    		radioCount++;
+    		radioValues = 0;
+    	}
+    	
+    	lr_save_param_regexp(
+    		tmpStr,
+    	    strlen(tmpStr),
+    	    "Ordinal=1",
+    	    "RegExp=\"value\"=\".*?\"",
+    	    "ResultParam=reMatchesRadioValue",
+        	LAST
+    	);
+    	
+    	strcpy(RadioGroups[radioCount-1].values[radioValues], lr_eval_string("reMatchesRadioValue"));
+    	radioValues++;
+    	
+    }
+        
+    strcpy (FormFields[iT].name, "LAST");
 
 	web_reg_find("Text=Question 2", 
 		LAST);
 
-	web_submit_form("1", 
-		"Snapshot=t17.inf", 
-		ITEMDATA, 
-		"Name={TextName}", "Value=test", ENDITEM, 
+	web_submit_data("1",
+        "Action=http://test.youplace.net/question/1",
+        "Method=POST",
+		"Snapshot=t17.inf",
+		ITEMDATA,
+		FormFields[1].name, FormFields[1].value, ENDITEM,
+		FormFields[2].name, FormFields[2].value, ENDITEM,
+		FormFields[3].name, FormFields[3].value, ENDITEM,
+		FormFields[4].name, FormFields[4].value, ENDITEM,
+		FormFields[5].name, FormFields[5].value, ENDITEM,
+		FormFields[6].name, FormFields[6].value, ENDITEM,
+		FormFields[7].name, FormFields[7].value, ENDITEM,
+		FormFields[8].name, FormFields[8].value, ENDITEM,
+		FormFields[9].name, FormFields[9].value, ENDITEM,
+		FormFields[10].name, FormFields[10].value, ENDITEM,
 		LAST);
 
 	web_reg_find("Text=Question 3", 

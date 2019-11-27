@@ -32,7 +32,7 @@
     "IsWinInetMode": false,
     "MaxUsedConnections": 1,
     "RecordedBrowser": "Internet Explorer",
-    "RecordingDate": "ноя-24-2019",
+    "RecordingDate": "Р Р…Р С•РЎРЏ-24-2019",
     "RecordingDuration": 58672,
     "RecordingMode": "N/A",
     "RecordingTimeStamp": 1574615060,
@@ -320,5 +320,5 @@
     "IncludeInScript": false,
     "IsScriptIncludeWebSocket": false
   },
-  "NumberOfCorrelations": 10
+  "NumberOfCorrelations": 8
 }
