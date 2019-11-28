@@ -347,3 +347,5 @@ Ending action vuser_end.
 Vuser Terminated.
 Action.c(216): t=26006ms: Closed connection [0] to test.youplace.net:80 after completing 3 request(s)  	[MsgId: MMSG-26000]
 Action.c(216): t=26006ms: Closed connection [1] to test.youplace.net:80 after completing 1 request(s)  	[MsgId: MMSG-26000]
+HTML-Mode memory management statistics: Reusable=1, NonReusable=0, CsMemBlockSize=4096, checks disabled  	[MsgId: MMSG-26000]
+Vuser 0 (thread 11248), ended OK."

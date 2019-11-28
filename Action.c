@@ -11,8 +11,15 @@ Action()
 		char maxValue[STR_LEN];
 	};
 	
+	struct Select{
+		char name[STR_LEN];
+		char values[10][STR_LEN];
+		char maxValue[STR_LEN];
+	};
+	
 	struct Field FormFields[10];
 	struct Radio RadioGroups[10];
+	struct Select SelectBoxes[10];
 	
 	int iT, iR, iS, i, j;
 
@@ -28,6 +35,9 @@ Action()
     
     int radioCount = 1;
     int radioValues = 0;
+    
+    int selectCount = 1;
+    int selectValues = 0;
 
     web_set_max_html_param_len("1024");
     	
@@ -116,24 +126,72 @@ Action()
 		j--;
     }
     
-    for (iS = 1; iS <= atoi(lr_eval_string("{Select_count}")) ; iS++)
+    selectCount = atoi(lr_eval_string("{Select_count}"));
+                       
+    for (iS = 1; iS <= selectCount; iS++)
     {
+    	int startPos = 0;
+    	int endPos = 0;
+    	int index, i = 0;
     	char tmpStr[1024];
-    	char** matchedStr;
     	sprintf(tmpSelectFields[iS], "{Select_%d}", iS);
     	strcpy(tmpStr, lr_eval_string(tmpSelectFields[iS]));
-    	matchedStr = str_split(tmpStr, '\"');
-    	if (matchedStr)
+    	
+    	for( index = 0; index < strlen(tmpStr); index++ )
     	{
-       		int i;
-        	for (i = 0; *(matchedStr + i); i++)
-        	{
-            	lr_output_message(*(matchedStr + i));
-        	}
+    		if (tmpStr[index] == '"')
+    		{
+    			startPos = index;
+    			while((tmpStr[index+1] != '"') && (index < strlen(tmpStr) - 1))
+    			{
+    				index++;
+    			}
+    			endPos = index;
+    			
+    			
+    			if (startPos == 0)
+    			{
+    				strncpy(SelectBoxes[iS].name, tmpStr+startPos + 1, endPos - startPos);
+    			}
+    			else
+    			{
+    				strncpy(SelectBoxes[iS].values[i], tmpStr+startPos + 1, endPos - startPos);
+    				i++;
+    			}
+    			index++;
+    		}
     	}
+    	
     }
     
-    strcpy(FormFields[i].name, "LAST");
+    
+    for (iS = 1; iS <= selectCount; iS++)
+    {
+    	char max[STR_LEN];
+    	strcpy(max,SelectBoxes[iS].values[0]);
+    	for (selectValues = 0; selectValues < 10; selectValues++)
+    	{
+    		if(strlen(SelectBoxes[iS].values[selectValues]) > strlen(max))
+    		{
+    			strcpy(max,SelectBoxes[iS].values[selectValues]);
+    		}
+    		strcpy(SelectBoxes[iS].maxValue, max);
+    	}
+    }
+
+    j = selectCount;
+    for (iT = i; iT < i + selectCount; iT++)
+    {
+		strcpy(FormFields[iT].name, "Name=");
+		strcat(FormFields[iT].name, SelectBoxes[j].name);
+		strcpy(FormFields[iT].value, "Value=");
+		strcat(FormFields[iT].value, SelectBoxes[j].maxValue);
+		lr_output_message(FormFields[iT].name);
+		lr_output_message(FormFields[iT].value);
+		j--;
+    }
+    
+    strcpy(FormFields[iT].name, "LAST");
 
 	web_reg_find("Text=Question 2", 
 		LAST);
@@ -157,7 +215,8 @@ Action()
     
     radioCount = 1;
     radioValues = 0;
-
+	selectCount = 1;
+	selectCount = 0;
 	web_reg_find("Text=Question 3", 
 		LAST);
 

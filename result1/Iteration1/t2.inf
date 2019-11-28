@@ -1,0 +1,13 @@
+[t2]
+SnapshotXmlFile=snapshot_2.xml
+ContentType=text/html
+StepName=Link: Start test
+Total=1
+FileName1=t2.html
+RequestHeaderFile=t2_RequestHeader.txt
+ResponseHeaderFile=t2_ResponseHeader.txt
+RawStepEndTime=1574927183447
+RawStepName=Start test
+RequestBodyFile=t2_RequestBody.txt
+RawStepStartTime=1574927183414
+URL1=http://test.youplace.net/question/1

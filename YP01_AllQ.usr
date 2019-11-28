@@ -53,9 +53,9 @@ vuser_end=cci
 [TransactionsOrder]
 Order=
 [StateManagement]
-LastReplayStatus=0
+LastReplayStatus=3
 [ActiveReplay]
-LastReplayedRunName=
-ActiveRunName=
+LastReplayedRunName=result1
+ActiveRunName=result1
 [ManuallyExtraFiles]
 functions.c=

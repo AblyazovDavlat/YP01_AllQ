@@ -2608,572 +2608,12 @@ void find_elements()
       
 	web_reg_save_param("Select", 
         "LB/IC=<select name=", 
-        "RB/IC=\">",
+        "RB/IC=<\/select>",
         "Ord=ALL", 
         "Search=body", 
         "LAST");	
 }
-
-char** str_split(char* a_str, const char a_delim)
-{
-    char** result    = 0;
-    size_t count     = 0;
-    char* tmp        = a_str;
-    char* last_comma = 0;
-    char delim[2];
-    delim[0] = a_delim;
-    delim[1] = 0;
-
-     
-    while (*tmp)
-    {
-        if (a_delim == *tmp)
-        {
-            count++;
-            last_comma = tmp;
-        }
-        tmp++;
-    }
-
-     
-    count += last_comma < (a_str + strlen(a_str) - 1);
-
-     
-
-    count++;
-
-    result = (char**)malloc(sizeof(char*) * count);
-
-    if (result)
-    {
-        size_t idx  = 0;
-        char* token = (char*)strtok(a_str, delim);
-
-        while (token)
-        {
-            assert(idx < count);
-            *(result + idx++) = (char*)strdup(token);
-            token = (char*)strtok(0, delim);
-        }
-        assert(idx == count - 1);
-        *(result + idx) = 0;
-    }
-
-    return result;
-}
 # 9 "globals.h" 2
-
-# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stdio.h" 1
-
-
-
-# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stddef.h" 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-typedef unsigned int uintptr_t;
-
-
-
-
-
-
-
-
-typedef int intptr_t;
-
-
-
-
-
-
-
-
-typedef int ptrdiff_t;
-
-
-
-
-
-typedef unsigned short wchar_t;
-
-
-
-
-typedef long time_t;
-
-
-
-
-typedef long clock_t;
-
-
-
-
-typedef wchar_t wint_t;
-typedef wchar_t wctype_t;
-
-
-
-
-typedef char *	va_list;
-
-
-
- 
-
-
-
-
-
-# 4 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stdio.h" 2
-
-
-
- 
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 79 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stdio.h"
-
-
-
-
-
-
-
-
-typedef struct _iobuf
-{
-	void* _Placeholder;
-} FILE;
-
-
-
-
-typedef long long fpos_t;
-
-
-
-
-FILE* __acrt_iob_func(unsigned);
-
-
-
-
-
-
-
- 
-
-
-
-# 126 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stdio.h"
-
-
-int _fgetchar(void);
-int _fputchar(int);
-int _flushall(void);
-int _rmtmp(void);
-FILE * _fsopen(const char *, const char *, int);
-
-
-
-void clearerr(FILE *);
-int fclose(FILE *);
-int _fcloseall(void);
-
-FILE * _fdopen(int, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-int fgetc(FILE *);
-int fgetpos(FILE *, fpos_t *);
-char * fgets(char *, int, FILE *);
-
-int _fileno(FILE *);
-
-FILE * fopen(const char *, const char *);
-int fprintf(FILE *, const char *, ...);
-int fputc(int, FILE *);
-
-int fputs(const char *, FILE *);
-size_t fread(void *, size_t, size_t, FILE *);
-FILE * freopen(const char *, const char *, FILE *);
-int fscanf(FILE *, const char *, ...);
-int fsetpos(FILE *, const fpos_t *);
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-size_t fwrite(const void *, size_t, size_t, FILE *);
-int getc(FILE *);
-int getchar(void);
-char * gets(char *);
-int _getw(FILE *);
-int _pclose(FILE *);
-FILE * _popen(const char *, const char *);
-int printf(const char *, ...);
-int putc(int, FILE *);
-int putchar(int);
-int puts(const char *);
-int _putw(int, FILE *);
-int remove(const char *);
-int rename(const char *, const char *);
-void rewind(FILE *);
-int scanf(const char *, ...);
-void setbuf(FILE *, char *);
-int setvbuf(FILE *, char *, int, size_t);
-int _snprintf(char *, size_t, const char *, ...);
-int sprintf(char *, const char *, ...);
-int sscanf(const char *, const char *, ...);
-char * _tempnam(char *, char *);
-FILE * tmpfile(void);
-char * tmpnam(char *);
-int ungetc(int, FILE *);
-int _unlink(const char *);
-int vfprintf(FILE *, const char *, va_list);
-int vprintf(const char *, va_list);
-int _vsnprintf(char *, size_t, const char *, va_list);
-int vsprintf(char *, const char *, va_list);
-
-
-
-
-
-
-
-
-# 10 "globals.h" 2
-
-# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stdlib.h" 1
- 
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stddef.h" 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-# 7 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stdlib.h" 2
-
-typedef struct
-{
-  int quot;  
-  int rem;  
-} div_t;
-
-typedef struct
-{
-  long quot;  
-  long rem;  
-} ldiv_t;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void	abort(void);
-int	abs(int);
-double	atof(const char *_nptr);
-int	atoi(const char *_nptr);
-long	atol(const char *_nptr);
-void *	bsearch(const void * _key,
-		       const void * _base,
-		       size_t _nmemb,
-		       size_t _size,
-		       int (*_compar)(const void *, const void *));
-void *	calloc(size_t _nmemb, size_t _size);
-div_t	div(int _numer, int _denom);
-void	exit(int _status);
-void	free(void *);
-char *  getenv(const char *_string);
-long	labs(long);
-ldiv_t	ldiv(long _numer, long _denom);
-void *	malloc(size_t _size);
-void	qsort(void * _base, size_t _nmemb, size_t _size, int(*_compar)(const void *, const void *));
-int	rand(void);
-void *	realloc(void * _r, size_t _size);
-void	srand(unsigned _seed);
-double	strtod(const char *_n, char **_endvoid);
-long	strtol(const char *_n, char **_endvoid, int _base);
-unsigned long strtoul(const char *_n, char **_end, int _base);
-int	system(const char *_string);
-
-int	putenv(const char *_string);
-
-char *	_gcvt(double,int,char *);
-char *	_fcvt(double,int,int *,int *);
-char *	_ecvt(double,int,int *,int *);
-
-
-# 11 "globals.h" 2
-
-# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/string.h" 1
- 
-
-
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/stddef.h" 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-# 10 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/string.h" 2
-
-
-
-
-
-
-
-
-
-
-void *	 memchr(const void *, int, size_t);
-int 	 memcmp(const void *, const void *, size_t);
-void * 	 memcpy(void *, const void *, size_t);
-void *	 memmove(void *, const void *, size_t);
-void *	 memset(void *, int, size_t);
-
-char 	*strcat(char *, const char *);
-char 	*strchr(const char *, int);
-int	 strcmp(const char *, const char *);
-int	 strcoll(const char *, const char *);
-char 	*strcpy(char *, const char *);
-size_t	 strcspn(const char *, const char *);
-char 	*strerror(int);
-size_t	 strlen(const char *);
-char 	*strncat(char *, const char *, size_t);
-int	 strncmp(const char *, const char *, size_t);
-char 	*strncpy(char *, const char *, size_t);
-char 	*strpbrk(const char *, const char *);
-char 	*strrchr(const char *, int);
-size_t	 strspn(const char *, const char *);
-char 	*strstr(const char *, const char *);
-char 	*strtok(char *, const char *);
-
-void *	 memccpy(void *, const void *, int, size_t);
-int	 strcmpi(const char *, const char *);
-char 	*strdup(const char *);
-int	 strnicmp(const char *, const char *, size_t);
-void	 swab(const char *, char *, size_t);
-
-# 12 "globals.h" 2
-
-# 1 "C:\\Program Files (x86)\\Micro Focus\\LoadRunner\\include/assert.h" 1
- 
-
-
-
-
-
-
-
-
-
-
-int _assertfail(char *__msg, char *__cond, char *__file, int __line);
-
-
-# 13 "globals.h" 2
 
 
 
@@ -3206,8 +2646,15 @@ Action()
 		char maxValue[64];
 	};
 	
+	struct Select{
+		char name[64];
+		char values[10][64];
+		char maxValue[64];
+	};
+	
 	struct Field FormFields[10];
 	struct Radio RadioGroups[10];
+	struct Select SelectBoxes[10];
 	
 	int iT, iR, iS, i, j;
 
@@ -3223,6 +2670,9 @@ Action()
     
     int radioCount = 1;
     int radioValues = 0;
+    
+    int selectCount = 1;
+    int selectValues = 0;
 
     web_set_max_html_param_len("1024");
     	
@@ -3311,24 +2761,72 @@ Action()
 		j--;
     }
     
-    for (iS = 1; iS <= atoi(lr_eval_string("{Select_count}")) ; iS++)
+    selectCount = atoi(lr_eval_string("{Select_count}"));
+                       
+    for (iS = 1; iS <= selectCount; iS++)
     {
+    	int startPos = 0;
+    	int endPos = 0;
+    	int index, i = 0;
     	char tmpStr[1024];
-    	char** matchedStr;
     	sprintf(tmpSelectFields[iS], "{Select_%d}", iS);
     	strcpy(tmpStr, lr_eval_string(tmpSelectFields[iS]));
-    	matchedStr = str_split(tmpStr, '\"');
-    	if (matchedStr)
+    	
+    	for( index = 0; index < strlen(tmpStr); index++ )
     	{
-       		int i;
-        	for (i = 0; *(matchedStr + i); i++)
-        	{
-            	lr_output_message(*(matchedStr + i));
-        	}
+    		if (tmpStr[index] == '"')
+    		{
+    			startPos = index;
+    			while((tmpStr[index+1] != '"') && (index < strlen(tmpStr) - 1))
+    			{
+    				index++;
+    			}
+    			endPos = index;
+    			
+    			
+    			if (startPos == 0)
+    			{
+    				strncpy(SelectBoxes[iS].name, tmpStr+startPos + 1, endPos - startPos);
+    			}
+    			else
+    			{
+    				strncpy(SelectBoxes[iS].values[i], tmpStr+startPos + 1, endPos - startPos);
+    				i++;
+    			}
+    			index++;
+    		}
     	}
+    	
     }
     
-    strcpy(FormFields[i].name, "LAST");
+    
+    for (iS = 1; iS <= selectCount; iS++)
+    {
+    	char max[64];
+    	strcpy(max,SelectBoxes[iS].values[0]);
+    	for (selectValues = 0; selectValues < 10; selectValues++)
+    	{
+    		if(strlen(SelectBoxes[iS].values[selectValues]) > strlen(max))
+    		{
+    			strcpy(max,SelectBoxes[iS].values[selectValues]);
+    		}
+    		strcpy(SelectBoxes[iS].maxValue, max);
+    	}
+    }
+
+    j = selectCount;
+    for (iT = i; iT < i + selectCount; iT++)
+    {
+		strcpy(FormFields[iT].name, "Name=");
+		strcat(FormFields[iT].name, SelectBoxes[j].name);
+		strcpy(FormFields[iT].value, "Value=");
+		strcat(FormFields[iT].value, SelectBoxes[j].maxValue);
+		lr_output_message(FormFields[iT].name);
+		lr_output_message(FormFields[iT].value);
+		j--;
+    }
+    
+    strcpy(FormFields[iT].name, "LAST");
 
 	web_reg_find("Text=Question 2", 
 		"LAST");
@@ -3352,7 +2850,8 @@ Action()
     
     radioCount = 1;
     radioValues = 0;
-
+	selectCount = 1;
+	selectCount = 0;
 	web_reg_find("Text=Question 3", 
 		"LAST");
 

@@ -5,4 +5,5 @@
   <WatchEntry3 value="iT" />
   <WatchEntry4 value="delim" />
   <WatchEntry5 value="delim[0]" />
+  <WatchEntry6 value="last_comma" />
 </Properties>
