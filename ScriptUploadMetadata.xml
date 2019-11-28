@@ -18,6 +18,7 @@
     <FileEntry Name="Watches.xml" Filter="2" />
     <FileEntry Name="combined_YP01_AllQ.c" Filter="2" />
     <FileEntry Name="pre_cci.c" Filter="2" />
+    <FileEntry Name=".gitignore" Filter="1" />
     <FileEntry Name="30472362440.idx" Filter="1" />
     <FileEntry Name="Bookmarks.xml" Filter="1" />
     <FileEntry Name="Breakpoints.xml" Filter="1" />

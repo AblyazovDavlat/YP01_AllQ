@@ -2698,8 +2698,6 @@ Action()
 		"LAST");
 
     find_elements();
-    
-   	flag = web_reg_find("Text=Test successfully passed", "LAST");
 
 	lr_continue_on_error(1);
 	
@@ -2710,7 +2708,9 @@ Action()
 
     lr_continue_on_error(0);
     
-    while( !flag )
+    flag = atoi(lr_eval_string("{Text_count}")) + atoi(lr_eval_string("{RadioName_count}")) + atoi(lr_eval_string("{Select_count}"));
+    
+    while( flag > 0)
 	{    	
 		for (iT = 1; iT <= atoi(lr_eval_string("{Text_count}")) ; iT++)
 	    {
@@ -2869,6 +2869,8 @@ Action()
 		selectCount = 0;
 	
 		lr_continue_on_error(0);
+		
+		flag = atoi(lr_eval_string("{Text_count}")) + atoi(lr_eval_string("{RadioName_count}")) + atoi(lr_eval_string("{Select_count}"));
     }
 
 	return 0;
