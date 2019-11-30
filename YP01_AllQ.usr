@@ -57,5 +57,3 @@ LastReplayStatus=2
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1
-[ManuallyExtraFiles]
-functions.c=

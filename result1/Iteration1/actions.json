@@ -6,79 +6,25 @@
                 "stepId": "STEP1",
                 "stepName": "Url: test.youplace.net",
                 "infFile": "t1.inf",
-                "time": 1574930726157
+                "time": 1575124868364
             },
             {
                 "stepId": "STEP2",
                 "stepName": "Link: Start test",
                 "infFile": "t2.inf",
-                "time": 1574930726403
+                "time": 1575124868598
             },
             {
                 "stepId": "STEP3",
                 "stepName": "Submit Data: 1",
                 "infFile": "t3.inf",
-                "time": 1574930726872
+                "time": 1575124870698
             },
             {
                 "stepId": "STEP4",
                 "stepName": "Submit Data: 2",
                 "infFile": "t4.inf",
-                "time": 1574930728274
-            },
-            {
-                "stepId": "STEP5",
-                "stepName": "Submit Data: 3",
-                "infFile": "t5.inf",
-                "time": 1574930729752
-            },
-            {
-                "stepId": "STEP6",
-                "stepName": "Submit Data: 4",
-                "infFile": "t6.inf",
-                "time": 1574930731167
-            },
-            {
-                "stepId": "STEP7",
-                "stepName": "Submit Data: 5",
-                "infFile": "t7.inf",
-                "time": 1574930731451
-            },
-            {
-                "stepId": "STEP8",
-                "stepName": "Submit Data: 6",
-                "infFile": "t8.inf",
-                "time": 1574930731790
-            },
-            {
-                "stepId": "STEP9",
-                "stepName": "Submit Data: 7",
-                "infFile": "t9.inf",
-                "time": 1574930732286
-            },
-            {
-                "stepId": "STEP10",
-                "stepName": "Submit Data: 8",
-                "infFile": "t10.inf",
-                "time": 1574930733256
-            },
-            {
-                "stepId": "STEP11",
-                "stepName": "Submit Data: 9",
-                "infFile": "t11.inf",
-                "time": 1574930736226
-            },
-            {
-                "stepId": "STEP12",
-                "stepName": "Submit Data: 10Action=http://test.youplace.net/question/10",
-                "infFile": "t12.inf",
-                "time": 1574930737195
-            },
-            {
-                "stepId": "STEP13",
-                "stepName": "Submit Data: 11Action=http://test.youplace.net/question/11",
-                "infFile": "t13.inf",
-                "time": 1574930738879
+                "time": 1575124871904
             }
         ],
         "transactions": []

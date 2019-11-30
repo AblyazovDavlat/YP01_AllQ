@@ -2582,7 +2582,39 @@ void
 
 # 8 "globals.h" 2
 
-# 1 "functions.c" 1
+
+ 
+ 
+
+
+
+# 3 "d:\\projects\\vugen\\scripts\\yp01_allq\\\\combined_YP01_AllQ.c" 2
+
+# 1 "vuser_init.c" 1
+vuser_init()
+{
+	return 0;
+}
+# 4 "d:\\projects\\vugen\\scripts\\yp01_allq\\\\combined_YP01_AllQ.c" 2
+
+# 1 "Action.c" 1
+struct Field{
+	char name[64];
+	char value[64];
+};
+
+struct Radio{
+	char name[64];
+	char values[10][64];
+	char max_value[64];
+};
+
+struct Select{
+	char name[64];
+	char values[10][64];
+	char max_value[64];
+};
+
 void find_elements()
 {
 	web_reg_save_param("Text", 
@@ -2613,71 +2645,160 @@ void find_elements()
         "Search=body", 
         "LAST");	
 }
-# 9 "globals.h" 2
 
-
-
- 
- 
-
-
-
-
-# 3 "d:\\projects\\vugen\\scripts\\yp01_allq\\\\combined_YP01_AllQ.c" 2
-
-# 1 "vuser_init.c" 1
-vuser_init()
+void resolve_text_fields(const char* param, const int size, struct Field* output)
 {
-	return 0;
+	int i;
+	char tmp_text_params[10][64];
+	
+	for (i = 1; i <= size; i++)
+	{
+		sprintf(tmp_text_params[i], "%s%s%d%s", param, "_", i, "}");
+		
+		strcpy(output[i].name, "Name=");
+		strcat(output[i].name, lr_eval_string(tmp_text_params[i]));
+		strcpy(output[i].value, "Value=test");
+		lr_output_message(output[i].name);
+	}
 }
-# 4 "d:\\projects\\vugen\\scripts\\yp01_allq\\\\combined_YP01_AllQ.c" 2
 
-# 1 "Action.c" 1
-Action()
+int resolve_radio_fields(const char* radio_name, const char* radio_value, const int size, struct Radio* output)
 {
-	struct Field{
-		char name[64];
-		char value[64];
-	};
+	int i, j;
+	int count_radio_groups = 0;
+	int count_values_per_group[10] = {0};
 	
-	struct Radio{
-		char name[64];
-		char values[10][64];
-		char maxValue[64];
-	};
+	char tmp_name[64];
+	char tmp_value[64];
+	char current_radio_name[64];
 	
-	struct Select{
-		char name[64];
-		char values[10][64];
-		char maxValue[64];
-	};
+	char tmp_radio_names[30][64];
+	char tmp_radio_values[30][64];
 	
-	struct Field FormFields[10];
-	struct Radio RadioGroups[10];
-	struct Select SelectBoxes[10];
+	for (i = 1; i <= size; i++)
+	{
+		sprintf(tmp_radio_names[i], "%s%s%d%s", radio_name, "_", i, "}");
+		strcpy(tmp_name, lr_eval_string(tmp_radio_names[i]));
+		
+		sprintf(tmp_radio_values[i], "%s%s%d%s", radio_value, "_", i, "}");
+		strcpy(tmp_value, lr_eval_string(tmp_radio_values[i]));
+		
+		if (strcmp(current_radio_name, tmp_name)!= 0)
+		{
+			count_radio_groups++;
+			
+			strcpy(output[count_radio_groups].name, tmp_name);
+			strcpy(current_radio_name, output[count_radio_groups].name);
+			count_values_per_group[count_radio_groups] = 0;
+		}
+		
+		strcpy(output[count_radio_groups].values[count_values_per_group[count_radio_groups]], tmp_value);
+		count_values_per_group[count_radio_groups]++;
+	}
 	
-	int iT, iR, iS, i, j;
+	for (i = 1; i <= count_radio_groups; i++)
+	{
+		char max[64];
+		strcpy(max, output[i].values[0]);
+			
+		for (j = 0; j < count_values_per_group[i]; j++)
+		{
+			if(strlen(output[i].values[j]) > strlen(max))
+	    	{
+	    		strcpy(max,output[i].values[j]);
+	    	}
+		}
+		strcpy(output[i].max_value, max);
+	}
+	
+	return count_radio_groups;
+}
 
-	char tmpTextFields[10][64];
+void resolve_select_fields(const char* select_name, const int size, struct Select* output)
+{
+	int start_pos = 0;
+	int index, i, j = 0;
 	
-	char tmpRadioName[30][64];
-	char tmpRadioValue[30][64];
+	int count_values_per_box[10] = {0};
+		
+	char tmp_select_fields[10][64];
+	char tmp_str[1024];
 	
-    char tmpSelectFields[20][64];
-    
-    char nameFields[10][64];
-    char valueFields[10][64];
-    
-    int radioCount = 1;
-    int radioValues = 0;
-    
-    int selectCount = 1;
-    int selectValues = 0;
+	for (i = 1; i <= size; i++)
+	{
+			
+		sprintf(tmp_select_fields[i], "%s%s%d%s", select_name, "_", i, "}");
+		strcpy(tmp_str, lr_eval_string(tmp_select_fields[i]));
+		
+		count_values_per_box[i] = 0;
+		
+		for (index = 0; index < strlen(tmp_str); index++)
+		{
+			if (tmp_str[index] == '"')
+			{
+				start_pos = index;
+				index++;
+				
+				while((tmp_str[index] != '"') && (index < strlen(tmp_str))){
+								
+					if (start_pos == 0)
+					{
+						output[i].name[index - 1] = tmp_str[index];
+					}
+					else
+					{
+						output[i].values[count_values_per_box[i]][index - 1]= tmp_str[index];
+					}
+					
+					index++;
+				}
+			}
+		}	
+	}
+	
+	for (i = 1; i <= size; i++)
+    {
+    	char max[64];
+    	strcpy(max,output[i].values[0]);
+    	
+    	for (j = 0; j < count_values_per_box[i]; j++)
+    	{
+    		if(strlen(output[i].values[j]) > strlen(max))
+    		{
+    			strcpy(max,output[i].values[j]);
+    		}   		
+    	}
+    	strcpy(output[i].max_value, max);
+    	lr_output_message(output[i].max_value);
+    }
+}
+
+Action()
+{	
+	
+	struct Field *FormFields;
+	struct Radio *RadioGroups;
+	struct Select *SelectBoxes;
+	
+	int count_resolved_radios = 0;
+	int count_resolved_items = 0;
+	int count_all_resolved_items = 0;
+	
+	int count_elements = 0;
+	int count_text_fields = 0;
+	int count_radio_elements = 0;
+	int count_select_elements = 0;
+	
+	int i, j;
     
     char indexForm[2];
     char url[64];
     
-    int flag, number = 0;
+    int number = 0;
+    
+    FormFields = (struct Field*)malloc(sizeof(struct Field) * 10);
+    RadioGroups = (struct Radio*)malloc(sizeof(struct Radio) * 10);
+    SelectBoxes = (struct Select*)malloc(sizeof(struct Select) * 10);
 
     web_set_max_html_param_len("1024");
     	
@@ -2708,142 +2829,60 @@ Action()
 
     lr_continue_on_error(0);
     
-    flag = atoi(lr_eval_string("{Text_count}")) + atoi(lr_eval_string("{RadioName_count}")) + atoi(lr_eval_string("{Select_count}"));
+    count_elements = atoi(lr_eval_string("{Text_count}")) + atoi(lr_eval_string("{RadioName_count}")) + atoi(lr_eval_string("{Select_count}"));
     
-    while( flag > 0)
-	{    	
-		for (iT = 1; iT <= atoi(lr_eval_string("{Text_count}")) ; iT++)
-	    {
-			sprintf(tmpTextFields[iT], "{Text_%d}", iT);
-			strcpy(FormFields[iT].name, "Name=");
-			strcat(FormFields[iT].name, lr_eval_string(tmpTextFields[iT]));
-			strcpy(FormFields[iT].value, "Value=test");
-			lr_output_message(FormFields[iT].name);
-	    }
-	    
-	
-	    for (iR = 1; iR <= atoi(lr_eval_string("{RadioName_count}")) ; iR++)
-	    {
-	    	char tmpName[64];
-	    	char tmpValue[64];
-	    	char currentRadioName[64];
-	    	
-	    	sprintf(tmpRadioName[iR], "{RadioName_%d}", iR);
-	    	strcpy(tmpName, lr_eval_string(tmpRadioName[iR]));
-	    	
-	    	sprintf(tmpRadioValue[iR], "{RadioValue_%d}", iR);
-	    	strcpy(tmpValue, lr_eval_string(tmpRadioValue[iR]));
-	    	
-	    	if (strcmp(currentRadioName, tmpName)!=0)
-	    	{
-	    		strcpy(RadioGroups[radioCount].name, tmpName);
-	    		strcpy(currentRadioName, RadioGroups[radioCount].name);
-	    		radioCount++;
-	    		radioValues = 0;
-	    	}
-	    	
-	    	strcpy(RadioGroups[radioCount-1].values[radioValues], tmpValue);
-	    	radioValues++;
-	    }
-	    
-	    for (iR = 1; iR < radioCount; iR++){
-	    	char max[64];
-	    	strcpy(max,RadioGroups[iR].values[0]);
-	    	for (radioValues = 0; radioValues < 10; radioValues++)
-	    	{
-	    		if(strlen(RadioGroups[iR].values[radioValues]) > strlen(max))
-	    		{
-	    			strcpy(max,RadioGroups[iR].values[radioValues]);
-	    		}
-	    		strcpy(RadioGroups[iR].maxValue, max);
-	    	}
-	    }
-	    
-	    j = radioCount - 1;
-	    for (i = iT; i < iT + radioCount - 1; i++)
-	    {
-			strcpy(FormFields[i].name, "Name=");
-			strcat(FormFields[i].name, RadioGroups[j].name);
+    while( count_elements > 0 )
+	{ 
+		memset(FormFields, "", 10 * sizeof(struct Field));
+		memset(RadioGroups, "", 10 * sizeof(struct Radio));
+		memset(SelectBoxes, "", 10 * sizeof(struct Select));   	
+    	count_text_fields = atoi(lr_eval_string("{Text_count}"));                         
+    	resolve_text_fields("{Text", count_text_fields, FormFields);
+		
+    	count_radio_elements = atoi(lr_eval_string("{RadioName_count}"));
+    	count_resolved_radios = resolve_radio_fields("{RadioName", "{RadioValue", count_radio_elements, RadioGroups);
+    	
+    	count_resolved_items = count_text_fields + count_resolved_radios;
+
+    	for (i = count_text_fields + 1; i <= count_resolved_items; i++)
+    	{
+    		strcpy(FormFields[i].name, "Name=");
+			strcat(FormFields[i].name, RadioGroups[count_resolved_radios].name);
 			strcpy(FormFields[i].value, "Value=");
-			strcat(FormFields[i].value, RadioGroups[j].maxValue);
+			strcat(FormFields[i].value, RadioGroups[count_resolved_radios].max_value);
 			lr_output_message(FormFields[i].name);
 			lr_output_message(FormFields[i].value);
-			j--;
-	    }
-	    
-	    selectCount = atoi(lr_eval_string("{Select_count}"));
-	                       
-	    for (iS = 1; iS <= selectCount; iS++)
-	    {
-	    	int startPos = 0;
-	    	int endPos = 0;
-	    	int index, i = 0;
-	    	char tmpStr[1024];
-	    	sprintf(tmpSelectFields[iS], "{Select_%d}", iS);
-	    	strcpy(tmpStr, lr_eval_string(tmpSelectFields[iS]));
-	    	
-	    	for( index = 0; index < strlen(tmpStr); index++ )
-	    	{
-	    		if (tmpStr[index] == '"')
-	    		{
-	    			startPos = index;
-	    			while((tmpStr[index+1] != '"') && (index < strlen(tmpStr) - 1))
-	    			{
-	    				index++;
-	    			}
-	    			endPos = index;
-	    			
-	    			
-	    			if (startPos == 0)
-	    			{
-	    				strncpy(SelectBoxes[iS].name, tmpStr+startPos + 1, endPos - startPos);
-	    			}
-	    			else
-	    			{
-	    				strncpy(SelectBoxes[iS].values[i], tmpStr+startPos + 1, endPos - startPos);
-	    				i++;
-	    			}
-	    			index++;
-	    		}
-	    	}
-	    	
-	    }
-	    
-	    
-	    for (iS = 1; iS <= selectCount; iS++)
-	    {
-	    	char max[64];
-	    	strcpy(max,SelectBoxes[iS].values[0]);
-	    	for (selectValues = 0; selectValues < 10; selectValues++)
-	    	{
-	    		if(strlen(SelectBoxes[iS].values[selectValues]) > strlen(max))
-	    		{
-	    			strcpy(max,SelectBoxes[iS].values[selectValues]);
-	    		}
-	    		strcpy(SelectBoxes[iS].maxValue, max);
-	    	}
-	    }
+			count_resolved_radios--;
+    	}
+
+	    count_select_elements = atoi(lr_eval_string("{Select_count}"));
+	    resolve_select_fields("{Select", count_select_elements, SelectBoxes);
 	
-	    j = selectCount;
-	    for (iT = i; iT < i + selectCount; iT++)
+	    count_all_resolved_items = count_resolved_items + count_select_elements;
+	    for (i = count_resolved_items + 1; i <= count_all_resolved_items; i++)
 	    {
-			strcpy(FormFields[iT].name, "Name=");
-			strcat(FormFields[iT].name, SelectBoxes[j].name);
-			strcpy(FormFields[iT].value, "Value=");
-			strcat(FormFields[iT].value, SelectBoxes[j].maxValue);
-			lr_output_message(FormFields[iT].name);
-			lr_output_message(FormFields[iT].value);
-			strcpy(SelectBoxes[j].maxValue, "/0");
-			j--;
+			strcpy(FormFields[i].name, "Name=");
+			strcat(FormFields[i].name, SelectBoxes[count_select_elements].name);
+			strcpy(FormFields[i].value, "Value=");
+			strcat(FormFields[i].value, SelectBoxes[count_select_elements].max_value);
+			lr_output_message(FormFields[i].name);
+			lr_output_message(FormFields[i].value);
+			count_select_elements--;
 	    }
 	    
-    	strcpy(FormFields[iT].name, "LAST");
+    	strcpy(FormFields[count_all_resolved_items + 1].name, "LAST");
     	
     	find_elements();
     	
     	number++;
     	sprintf(indexForm, "%d", number);
     	sprintf(url, "Action=http://test.youplace.net/question/%d", number);
+    	
+    	for(i = 1; i <=10 ; i++)
+    	{
+    		lr_output_message(FormFields[i].name);
+			lr_output_message(FormFields[i].value);
+    	}
     	
     	lr_continue_on_error(1);
     	web_submit_data(indexForm,
@@ -2862,17 +2901,26 @@ Action()
 			FormFields[9].name, FormFields[9].value, "ENDITEM",
 			FormFields[10].name, FormFields[10].value, "ENDITEM",
 			"LAST");
-	    
-	    radioCount = 1;
-	    radioValues = 0;
-		selectCount = 1;
-		selectCount = 0;
 	
 		lr_continue_on_error(0);
 		
-		flag = atoi(lr_eval_string("{Text_count}")) + atoi(lr_eval_string("{RadioName_count}")) + atoi(lr_eval_string("{Select_count}"));
+		count_elements = atoi(lr_eval_string("{Text_count}")) + atoi(lr_eval_string("{RadioName_count}")) + atoi(lr_eval_string("{Select_count}"));
+		
+		count_resolved_radios = 0;
+		count_resolved_items = 0;
+		count_all_resolved_items = 0;
+	
+		count_text_fields = 0;
+		count_radio_elements = 0;
+		count_select_elements = 0;
     }
-
+	
+    free(FormFields);
+	free(RadioGroups);
+	free(SelectBoxes);
+	
+    lr_think_time(5000);
+    
 	return 0;
 }
 # 5 "d:\\projects\\vugen\\scripts\\yp01_allq\\\\combined_YP01_AllQ.c" 2

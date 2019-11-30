@@ -6,4 +6,5 @@
   <WatchEntry4 value="delim" />
   <WatchEntry5 value="delim[0]" />
   <WatchEntry6 value="last_comma" />
+  <WatchEntry7 value="tmp_str[index]" />
 </Properties>
