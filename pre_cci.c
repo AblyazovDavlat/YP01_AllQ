@@ -2717,6 +2717,7 @@ int resolve_radio_fields(const char* radio_name, const char* radio_value, const 
 void resolve_select_fields(const char* select_name, const int size, struct Select* output)
 {
 	int start_pos = 0;
+	int end_pos = 0;
 	int index, i, j = 0;
 	
 	int count_values_per_box[10] = {0};
@@ -2726,7 +2727,8 @@ void resolve_select_fields(const char* select_name, const int size, struct Selec
 	
 	for (i = 1; i <= size; i++)
 	{
-			
+		j = 0;
+		
 		sprintf(tmp_select_fields[i], "%s%s%d%s", select_name, "_", i, "}");
 		strcpy(tmp_str, lr_eval_string(tmp_select_fields[i]));
 		
@@ -2734,26 +2736,34 @@ void resolve_select_fields(const char* select_name, const int size, struct Selec
 		
 		for (index = 0; index < strlen(tmp_str); index++)
 		{
+
 			if (tmp_str[index] == '"')
 			{
-				start_pos = index;
 				index++;
+				start_pos = index;
 				
-				while((tmp_str[index] != '"') && (index < strlen(tmp_str))){
-								
-					if (start_pos == 0)
-					{
-						output[i].name[index - 1] = tmp_str[index];
-					}
-					else
-					{
-						output[i].values[count_values_per_box[i]][index - 1]= tmp_str[index];
-					}
-					
-					index++;
+				while( (tmp_str[index]!='"') && (index < strlen(tmp_str)))
+				{
+				   index++;   	
+				}
+				
+				end_pos = index;
+				
+				if (start_pos == 1)
+				{
+					strncpy(output[i].name, tmp_str + start_pos, end_pos - start_pos);
+					lr_output_message(output[i].name);
+				}
+				else
+				{
+					strncpy(output[i].values[j], tmp_str + start_pos, end_pos - start_pos);
+					lr_output_message(output[i].values[j]);
+					j++;
 				}
 			}
-		}	
+		}
+		
+		count_values_per_box[i] = j;		
 	}
 	
 	for (i = 1; i <= size; i++)
@@ -2833,9 +2843,10 @@ Action()
     
     while( count_elements > 0 )
 	{ 
-		memset(FormFields, "", 10 * sizeof(struct Field));
-		memset(RadioGroups, "", 10 * sizeof(struct Radio));
-		memset(SelectBoxes, "", 10 * sizeof(struct Select));   	
+		memset(FormFields, 0, 10 * sizeof(struct Field));
+		memset(RadioGroups, 0, 10 * sizeof(struct Radio));
+		memset(SelectBoxes, 0, 10 * sizeof(struct Select));
+		
     	count_text_fields = atoi(lr_eval_string("{Text_count}"));                         
     	resolve_text_fields("{Text", count_text_fields, FormFields);
 		

@@ -6,25 +6,67 @@
                 "stepId": "STEP1",
                 "stepName": "Url: test.youplace.net",
                 "infFile": "t1.inf",
-                "time": 1575124868364
+                "time": 1575205605856
             },
             {
                 "stepId": "STEP2",
                 "stepName": "Link: Start test",
                 "infFile": "t2.inf",
-                "time": 1575124868598
+                "time": 1575205606098
             },
             {
                 "stepId": "STEP3",
                 "stepName": "Submit Data: 1",
                 "infFile": "t3.inf",
-                "time": 1575124870698
+                "time": 1575205637380
             },
             {
                 "stepId": "STEP4",
                 "stepName": "Submit Data: 2",
                 "infFile": "t4.inf",
-                "time": 1575124871904
+                "time": 1575205637892
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Submit Data: 3",
+                "infFile": "t5.inf",
+                "time": 1575205638231
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Submit Data: 4",
+                "infFile": "t6.inf",
+                "time": 1575205646473
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Submit Data: 5",
+                "infFile": "t7.inf",
+                "time": 1575205646858
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Submit Data: 6",
+                "infFile": "t8.inf",
+                "time": 1575205648418
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Submit Data: 7",
+                "infFile": "t9.inf",
+                "time": 1575205650005
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Submit Data: 8",
+                "infFile": "t10.inf",
+                "time": 1575205651853
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Submit Data: 9",
+                "infFile": "t11.inf",
+                "time": 1575205652347
             }
         ],
         "transactions": []
